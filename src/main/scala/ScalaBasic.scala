@@ -16,6 +16,15 @@ object ScalaBasic {
     print("\n")
     val Happy = new HappyNewYear("Julio"," All the best for you")
     Happy.ChineseYear("The best")
+
+    print("=" * 50)
+    print("Coordinates")
+    print("=" * 50)
+    print("\n")
+
+    compareCoordinate()
+
+
   }
 
   def home: String = System.getProperty("user.home")
@@ -23,5 +32,29 @@ object ScalaBasic {
   def getCubeString(num: Double): String = {
     val cube = num*num*num
     cube.toString
+  }
+
+  def compareCoordinate() : Unit= {
+    val coordinate_1 = Coordinate(2,4)
+    val coordinate_2 = Coordinate(2,4)
+    val coordinate_3 = Coordinate(2,5)
+
+    if (coordinate_1 == coordinate_2)
+    {
+      println(s"$coordinate_1 are equal to $coordinate_2")
+    }else
+    {
+      println(s"$coordinate_1 are different to $coordinate_2")
+    }
+
+    if (coordinate_1 == coordinate_3)
+    {
+      println(s"$coordinate_1 are equal to $coordinate_3")
+    }
+    else
+    {
+      println(s"$coordinate_1 are different to $coordinate_3")
+    }
+
   }
 }
