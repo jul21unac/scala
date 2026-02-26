@@ -24,6 +24,16 @@ object ScalaBasic {
 
     compareCoordinate()
 
+    print("=" * 50)
+    print("Fabric Identity")
+    print("=" * 50)
+    print("\n")
+
+    val Identity: Int = Facbric.create()
+    val NewIdentity: Int = Facbric.create()
+
+    println(Identity)
+    println(NewIdentity)
 
   }
 
