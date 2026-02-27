@@ -35,6 +35,8 @@ object ScalaBasic {
     println(Identity)
     println(NewIdentity)
 
+    traitPractice()
+
   }
 
   def home: String = System.getProperty("user.home")
@@ -65,6 +67,19 @@ object ScalaBasic {
     {
       println(s"$coordinate_1 are different to $coordinate_3")
     }
+
+  }
+  def traitPractice() : Unit = {
+
+    print("=" * 50)
+    print("Traits Example")
+    print("=" * 50)
+    print("\n")
+    val Sim = new SimpleRegards()
+    Sim.Regards(" Julio")
+
+    val Feliz = new MerryChristmas("Merry Christmas", "France")
+    Feliz.Regards(" Julio")
 
   }
 }
