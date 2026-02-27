@@ -1,0 +1,3 @@
+class SimpleRegards extends HollydayPhrase {
+
+}
