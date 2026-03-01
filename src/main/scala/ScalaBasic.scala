@@ -1,3 +1,5 @@
+import java.security.KeyStore.TrustedCertificateEntry
+
 object ScalaBasic {
 
   def main(args: Array[String]): Unit = {
@@ -36,6 +38,7 @@ object ScalaBasic {
     println(NewIdentity)
 
     traitPractice()
+    typesPractice()
 
   }
 
@@ -82,4 +85,34 @@ object ScalaBasic {
     Feliz.Regards(" Julio")
 
   }
+  def typesPractice() : Unit = {
+
+    print("=" * 50)
+    print("Types Practice")
+    print("=" * 50)
+    print("\n")
+
+    val phrase: String = " New Phrase"
+    val int_practice: Int = 123
+    val char_prractice: Char = 'z'
+    val boolean_practice: Boolean = true
+    val float_practice: Float = 3.5623f
+    val double_practice: Double = 3.44
+    val short_practice: Short= 4.55.toShort
+
+    val lista: List[Any] = List(
+      phrase, int_practice,char_prractice, boolean_practice,
+      () => "an anonymous function returning a string",
+      float_practice, double_practice, short_practice
+
+    )
+
+    lista.foreach(element => println(element))
+
+
+
+
+
+  }
+
 }
