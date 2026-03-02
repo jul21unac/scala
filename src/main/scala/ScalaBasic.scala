@@ -39,6 +39,7 @@ object ScalaBasic {
 
     traitPractice()
     typesPractice()
+    castTypes()
 
   }
 
@@ -109,8 +110,29 @@ object ScalaBasic {
 
     lista.foreach(element => println(element))
 
+  }
 
+  def castTypes(): Unit = {
 
+    print("=" * 50)
+    print("Type Cast")
+    print("=" * 50)
+    print("\n")
+
+    val exeInt = 1213254654
+    println(exeInt)
+    val exeLong: Long = exeInt.toLong
+    println(exeLong)
+    val exeFloat: Float = exeLong.toFloat
+    println(exeFloat)
+
+    val exeDouble: Double = exeFloat.toDouble
+    println(exeDouble)
+
+    val exechar: Char = 'z'
+    val exeInte: Int = exechar.toInt
+    println(exechar)
+    println(exeInte)
 
 
   }
