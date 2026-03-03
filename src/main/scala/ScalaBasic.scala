@@ -39,7 +39,14 @@ object ScalaBasic {
 
     traitPractice()
     typesPractice()
+    val nu_1 = 1
+    val nu_2 = 2
+    adition()
+
     castTypes()
+
+
+
 
   }
 
@@ -133,6 +140,17 @@ object ScalaBasic {
     val exeInte: Int = exechar.toInt
     println(exechar)
     println(exeInte)
+
+
+  }
+
+  def adition( ): Unit = {
+
+    print("=" * 50)
+    print("null practice")
+    print("=" * 50)
+    print("\n")
+
 
 
   }
