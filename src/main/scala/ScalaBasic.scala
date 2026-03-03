@@ -39,7 +39,14 @@ object ScalaBasic {
 
     traitPractice()
     typesPractice()
+
+    suma(Some(1.0), Some(2.0))
+    suma(None, Some(2.0))
+    suma(Some(1.0), None)
     castTypes()
+
+
+
 
   }
 
@@ -135,6 +142,21 @@ object ScalaBasic {
     println(exeInte)
 
 
+  }
+
+  def suma(n1: Option[Double], n2: Option[Double]): Unit = {
+    println("=" * 50)
+    println("Option practice")
+    println("=" * 50)
+
+    (n1, n2) match {
+      case (None, _) =>
+        println("first param is empty")
+      case (_, None) =>
+        println("second param is empty")
+      case (Some(a), Some(b)) =>
+        println(a + b)
+    }
   }
 
 }
