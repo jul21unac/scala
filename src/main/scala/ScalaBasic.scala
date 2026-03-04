@@ -45,8 +45,13 @@ object ScalaBasic {
     suma(Some(1.0), None)
     castTypes()
 
+    val simC = new SimpleClass()
 
-
+    val tw = new TwoWord( "hap","birth" )
+    println(tw.toString)
+    println(tw.word_1)
+    tw.addAnotherWord("py","day")
+    println(tw.toString)
 
   }
 
