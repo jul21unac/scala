@@ -53,6 +53,9 @@ object ScalaBasic {
     tw.addAnotherWord("py","day")
     println(tw.toString)
 
+    var wo = new Words(fw="third")
+    println(wo)
+
   }
 
   def home: String = System.getProperty("user.home")
