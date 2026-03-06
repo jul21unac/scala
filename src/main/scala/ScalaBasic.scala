@@ -55,6 +55,10 @@ object ScalaBasic {
 
     var wo = new Words(fw="third")
     println(wo)
+    var phra = new Phrase
+    phra.wor_1 = "hola"
+
+    println(phra)
 
   }
 
