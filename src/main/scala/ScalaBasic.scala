@@ -1,3 +1,5 @@
+import com.traitPractice.WordGenerator
+
 import java.security.KeyStore.TrustedCertificateEntry
 
 object ScalaBasic {
@@ -67,6 +69,13 @@ object ScalaBasic {
     ani.printAnimalData( typ = "Cat", nickName = "Gordo")
     ani.printAnimalData( color = "White ",typ = "Cat", nickName = "Gordo")
 
+    var wg = new WordGenerator(List("blue", "red", "green", "yellow"))
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
   }
 
   def home: String = System.getProperty("user.home")
