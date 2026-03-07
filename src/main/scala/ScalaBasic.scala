@@ -57,8 +57,11 @@ object ScalaBasic {
     println(wo)
     var phra = new Phrase
     phra.wor_1 = "hola"
-
     println(phra)
+    var phra2 = new Phrase
+    phra2.wor_1 = "civil"
+    phra2.wor_2 =  "war"
+
 
   }
 
