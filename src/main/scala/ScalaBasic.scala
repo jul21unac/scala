@@ -62,6 +62,10 @@ object ScalaBasic {
     phra2.wor_1 = "civil"
     phra2.wor_2 =  "war"
 
+    var ani = new Animal
+    ani.printAnimalData(nickName = "Gordo", typ = "Cat")
+    ani.printAnimalData( typ = "Cat", nickName = "Gordo")
+    ani.printAnimalData( color = "White ",typ = "Cat", nickName = "Gordo")
 
   }
 
