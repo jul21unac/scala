@@ -1,4 +1,7 @@
+import com.traitPractice._
+
 import java.security.KeyStore.TrustedCertificateEntry
+import scala.collection.mutable.ArrayBuffer
 
 object ScalaBasic {
 
@@ -66,6 +69,21 @@ object ScalaBasic {
     ani.printAnimalData(nickName = "Gordo", typ = "Cat")
     ani.printAnimalData( typ = "Cat", nickName = "Gordo")
     ani.printAnimalData( color = "White ",typ = "Cat", nickName = "Gordo")
+
+    var wg = new WordGenerator(List("blue", "red", "green", "yellow"))
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+    println(wg.nextW())
+
+    val madrid =new  Madrid("España")
+    val paris =new  Paris("Francia")
+    val Lands = ArrayBuffer.empty[City]
+    Lands.append(madrid)
+    Lands.append(paris)
+    Lands.foreach(Lands => println(Lands.country))
 
   }
 
