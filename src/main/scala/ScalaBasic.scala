@@ -85,7 +85,6 @@ object ScalaBasic {
     Lands.append(paris)
     Lands.foreach(Lands => println(Lands.country))
 
-
   }
 
   def home: String = System.getProperty("user.home")
