@@ -1,6 +1,7 @@
-import com.traitPractice.WordGenerator
+import com.traitPractice._
 
 import java.security.KeyStore.TrustedCertificateEntry
+import scala.collection.mutable.ArrayBuffer
 
 object ScalaBasic {
 
@@ -76,6 +77,15 @@ object ScalaBasic {
     println(wg.nextW())
     println(wg.nextW())
     println(wg.nextW())
+
+    val madrid =new  Madrid("España")
+    val paris =new  Paris("Francia")
+    val Lands = ArrayBuffer.empty[City]
+    Lands.append(madrid)
+    Lands.append(paris)
+    Lands.foreach(Lands => println(Lands.country))
+
+
   }
 
   def home: String = System.getProperty("user.home")
