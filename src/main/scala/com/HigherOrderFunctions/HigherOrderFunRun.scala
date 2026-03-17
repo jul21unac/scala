@@ -18,6 +18,9 @@ object HigherOrderFunRun {
     println(Expenses.MobilBill(Inc))
     println(Expenses.EnergyBill(Inc))
 
+    println(ExpenseAndFuntion.taxes(Inc))
+    println(ExpenseAndFuntion.MobilBill(Inc))
+    println(ExpenseAndFuntion.EnergyBill(Inc))
 
 
   }
