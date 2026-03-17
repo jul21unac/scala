@@ -22,6 +22,10 @@ object HigherOrderFunRun {
     println(ExpenseAndFuntion.MobilBill(Inc))
     println(ExpenseAndFuntion.EnergyBill(Inc))
 
+    var hifun= HelloFuntion.SayHi("Hi", people = false)
+    println(hifun("Welcome", "Bye"))
+
+
 
   }
 
