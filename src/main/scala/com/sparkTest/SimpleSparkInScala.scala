@@ -1,6 +1,7 @@
 package com.sparkTest
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
+import org.apache.spark.sql.SparkSession
 
 object SimpleSparkInScala {
 
@@ -18,6 +19,24 @@ object SimpleSparkInScala {
     val simpleRDD = sc.parallelize(list)
 
     simpleRDD.foreach { x => println(x) }
+
+    testHive()
+  }
+
+  def testHive(): Unit = {
+    val spark = SparkSession.builder()
+      .appName("HiveTableExample")
+      .config("hive.metastore.uris", "thrift://localhost:9083")  // O host.docker.internal si Spark en Docker
+      .config("spark.sql.warehouse.dir", "/user/hive/warehouse")
+      .enableHiveSupport()
+      .getOrCreate()
+
+    spark.sql("""
+  CREATE TABLE IF NOT EXISTS mi_tabla (
+    id INT,
+    nombre STRING
+  ) USING hive
+""")
 
   }
 

@@ -96,6 +96,20 @@ services:
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
 
+
+  hive-metastore:
+    image: apache/hive:4.0.0
+    container_name: hive-metastore
+    ports:
+      - "9083:9083"
+    environment:
+      - SERVICE_NAME=metastore
+    volumes:
+      - hive-warehouse:/opt/hive/data/warehouse  # Persiste datos
+volumes:
+  hive-warehouse:
+
 networks:
   kudu-net:
     driver: bridge
+
