@@ -31,12 +31,23 @@ object SimpleSparkInScala {
       .enableHiveSupport()
       .getOrCreate()
 
+    /*
     spark.sql("""
   CREATE TABLE IF NOT EXISTS mi_tabla (
     id INT,
     nombre STRING
   ) USING hive
 """)
+*/
+
+    spark.sql("""
+  insert into mi_tabla values (1, 'lalal')
+""")
+
+val resultado = spark.sql("SELECT * FROM mi_tabla")
+resultado.show()  // Muestra todas las filas (20 por defecto)
+
+spark.stop()
 
   }
 
