@@ -8,7 +8,7 @@ object HigherOrderFunRun {
     pluralAnimal2Steps()
     pluralAnimalCurrying()
 
-    val Bills = Seq(34545.55,2_00,1_00,3_000,3_1416,2_3321)
+    val Bills = Seq(34545.55,200,100,3000,31416,23321)
     val Inc = List(45646.5,523423,34324,24234,324234)
 
     val CNS2E = new ConvertNuevosSoles2Euro(Bills,4.13)

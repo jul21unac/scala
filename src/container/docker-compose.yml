@@ -75,12 +75,22 @@ services:
   impala:
     image: apache/kudu:impala-latest
     container_name: kudu-impala
-    command: ["impala", "--unlock_unsafe_flags"]
+    command: 
+        - "impala"
+        - "--hive_metastore_uris=thrift://hive-metastore:9083"
+        - "--unlock_unsafe_flags=true"
+        - "--webserver_interface=0.0.0.0"
     depends_on:
-      - kudu-tserver-1
-      - kudu-master-1
-      - kudu-master-2
-      - kudu-master-3
+      kudu-tserver-1:
+        condition: service_started
+      kudu-master-1:
+        condition: service_started
+      kudu-master-2:
+        condition: service_started
+      kudu-master-3:
+        condition: service_started
+      hive-metastore:
+        condition: service_started
     ports:
       - "21000:21000"
       - "21050:21050"
@@ -90,12 +100,31 @@ services:
     deploy:
       resources:
         limits:
-          memory: 500M
+          memory: 4096M   # ← mínimo recomendado
+    volumes:
+      - ./hive-site.xml:/opt/impala/conf/hive-site.xml           
     networks:
       - kudu-net
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
 
+
+  hive-metastore:
+    image: apache/hive:4.0.0
+    container_name: hive-metastore
+    ports:
+      - "9083:9083"
+    environment:
+      - SERVICE_NAME=metastore
+    volumes:
+      - hive-warehouse:/opt/hive/data/warehouse  # Persiste datos
+    networks:
+      - kudu-net    
+  
+volumes:
+  hive-warehouse:
+
 networks:
   kudu-net:
     driver: bridge
+
