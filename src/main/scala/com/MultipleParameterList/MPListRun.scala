@@ -4,7 +4,9 @@ object MPListRun {
   
     def main(args: Array[String]): Unit = {
             house()
-
+            val words_3 = List("h","o","m","e")
+            val a= foldLeft1[String,String](words_3, "",(m, n) => m + n)
+            println(a)
     }
 
     def house()
@@ -21,7 +23,9 @@ object MPListRun {
 
     }
    
-
+    def foldLeft1[A, B](as: List[A], b0: B, op: (B, A) => B) : B =
+  if (as.isEmpty) b0
+  else foldLeft1(as.tail, op(b0, as.head), op)
 
 
 }
