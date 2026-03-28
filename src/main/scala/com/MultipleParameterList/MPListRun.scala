@@ -14,7 +14,15 @@ object MPListRun {
 
         val word_2 = List("w", "e", "l", "c", "o", "m", "e")
         val res_2 = word_2.foldLeft("")((m, n) => m + n)
+
         println(res_2)
+
+        val word_3 = List("t","o"," ","H","o","m","e")
+        val res_3 = foldLeft1[String, String](word_3, "", _ + _)
+        println(res_3)
     }
+    def foldLeft1[A, B](as: List[A], b0: B, op: (B, A) => B) = ???
+
+
 
 }
