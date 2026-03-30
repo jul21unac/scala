@@ -24,6 +24,12 @@ object MPListRun {
 
         println(res_2)
 
+        val names = List("Alice", "Bob", "Charlie")
+        val adjectives = List("smart", "kind", "funny")
+
+        val sentences = twoStrList(names, adjectives)(makeSentence)
+        println(sentences)
+
 
     }
    
@@ -40,6 +46,12 @@ object MPListRun {
         if (str_2.endsWith("ing")) true
         else false
 
-      
+    def twoStrList(str_1 :List[String], str_2 : List[String] )( f : (String, String) => Boolean) : List[String] =
+      if (str_1.isEmpty || str_2.isEmpty) str_1
+        else if(f(str_1.head, str_2.head)) str_1.head :: twoStrList(str_1.tail, str_2.tail)(f)
+        else twoStrList(str_1.tail, str_2.tail)(f)
+
+    def makeSentence(str_1 : String, str_2 : String) : String = 
+        str_1 + " is " + str_2
 
 }
