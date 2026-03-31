@@ -54,4 +54,10 @@ object MPListRun {
     def makeSentence(str_1 : String, str_2 : String) : String = 
         str_1 + " is " + str_2
 
+    def isBadWord(str : String) : Boolean = 
+        true
+
+    def isGoodWord(str : String) : Boolean = 
+        true
+
 }
