@@ -26,9 +26,11 @@ object MPListRun {
 
         val names = List("Alice", "Bob", "Charlie")
         val adjectives = List("smart", "kind", "funny")
-
+        val badWords = List("bad", "ugly", "nasty")
         val sentences = twoStrList(names, adjectives)(makeSentence)
         println(sentences)
+
+      
 
 
     }
@@ -59,5 +61,7 @@ object MPListRun {
 
     def isGoodWord(str : String) : Boolean = 
         true
+
+    
 
 }
