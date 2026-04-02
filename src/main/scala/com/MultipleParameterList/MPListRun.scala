@@ -30,9 +30,6 @@ object MPListRun {
         val sentences = twoStrList(names, adjectives)(makeSentence)
         println(sentences)
 
-      
-
-
     }
    
     def foldLeft1[A, B](as: List[A], b0: B, op: (B, A) => B) : B =
@@ -47,20 +44,18 @@ object MPListRun {
     def haveIng(str_2 : String) : Boolean = 
         if (str_2.endsWith("ing")) true
         else false
+ 
 
-    def twoStrList(str_1 :List[String], str_2 : List[String] )( f : (String, String) => Boolean) : List[String] =
-      if (str_1.isEmpty || str_2.isEmpty) str_1
-        else if(f(str_1.head, str_2.head)) str_1.head :: twoStrList(str_1.tail, str_2.tail)(f)
-        else twoStrList(str_1.tail, str_2.tail)(f)
+    def twoStrList(str_1 :List[String], str_2 : List[String] )( f: (String, String) => String) : List[String] =
+      if (str_1.isEmpty || str_2.isEmpty) Nil
+      else f(str_1.head, str_2.head) :: twoStrList(str_1.tail, str_2.tail)(f)
+
 
     def makeSentence(str_1 : String, str_2 : String) : String = 
         str_1 + " is " + str_2
 
-    def isBadWord(str : String) : Boolean = 
-        true
 
-    def isGoodWord(str : String) : Boolean = 
-        true
+
 
     
 
