@@ -9,8 +9,11 @@ object MPListRun {
             println(a)
 
             val str_2 = List("cook","ingenue" ,"reading","writing","swimming","running","playing","eat","clean","car")
-            val filtered = filter(str_2, haveIng)
+            val filtered = filter(str_2)(haveIng _)
             println(filtered)
+            val numb = List(1,1,2,3,5,8,13)
+            val mul2 = mult(2)_
+            print(numb.map(mul2))
     }
 
     def house()
@@ -30,16 +33,19 @@ object MPListRun {
         val sentences = twoStrList(names, adjectives)(makeSentence)
         println(sentences)
 
+
+
+
     }
    
     def foldLeft1[A, B](as: List[A], b0: B, op: (B, A) => B) : B =
       if (as.isEmpty) b0
       else foldLeft1(as.tail, op(b0, as.head), op)
 
-    def filter(str_1 : List[String], f : String => Boolean) : List[String] =     
+    def filter(str_1 : List[String])( f : String => Boolean) : List[String] =     
         if (str_1.isEmpty) str_1
-        else if (f( str_1.head) ) str_1.head :: filter(str_1.tail, f)
-        else filter(str_1.tail, f)
+        else if (f( str_1.head) ) str_1.head :: filter(str_1.tail)(f)
+        else filter(str_1.tail)(f)
       
     def haveIng(str_2 : String) : Boolean = 
         if (str_2.endsWith("ing")) true
@@ -53,6 +59,15 @@ object MPListRun {
 
     def makeSentence(str_1 : String, str_2 : String) : String = 
         str_1 + " is " + str_2
+
+    def mult(x: Int)(y: Int): Int = x*y
+/*
+    def gretter(a: Int)(f: (Int,Int) => Int) : Int 
+        if (a.isEmpty) a
+        else a 
+*/
+    
+    
 
 
 
