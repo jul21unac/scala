@@ -14,6 +14,8 @@ object MPListRun {
             val numb = List(1,1,2,3,5,8,13)
             val mul2 = mult(2)_
             print(numb.map(mul2))
+
+            
     }
 
     def house()
@@ -61,11 +63,14 @@ object MPListRun {
         str_1 + " is " + str_2
 
     def mult(x: Int)(y: Int): Int = x*y
-/*
-    def gretter(a: Int)(f: (Int,Int) => Int) : Int 
+
+
+    def greater(a: List[Int])(f: (Int,Int) => Int) : Int 
         if (a.isEmpty) a
-        else a 
-*/
+        else f(a.head, greater(a.tail)(f))
+
+
+
     
     
 
