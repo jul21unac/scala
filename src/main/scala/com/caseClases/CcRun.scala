@@ -1,1 +1,5 @@
-Class Cc class Def main (): Unit
+object CcRun {
+    def main(args: Array[String]): Unit = {
+        
+    }
+}
