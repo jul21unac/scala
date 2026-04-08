@@ -15,8 +15,6 @@ object MPListRun {
             val mul2 = mult(2)_
             print(numb.map(mul2))
 
-            val maxNum = greater(numb)(max)
-            println(maxNum)
             
     }
 
@@ -66,21 +64,5 @@ object MPListRun {
 
     def mult(x: Int)(y: Int): Int = x*y
 
-
-    def greater(a: List[Int])(f: (Int,Int) => Int) : List[Int ]=
-        if (a.isEmpty) a
-        else f(a.head, greater(a.tail)(f))
-
-
-    def max(a: Int, b: Int) : Int = if (a > b) a else b
-
-
-    
-    
-
-
-
-
-    
 
 }
