@@ -13,6 +13,13 @@ object runPM {
         println(matchMonth(12))
         println(matchMonth(15))
 
+        val fauto = automobile(5, 4)
+        val fmoto = motorcycle(2, 2)
+        val ftruck = truck(3, 6)
+
+        println(showInfoVehicle(fauto))
+        println(showInfoVehicle(fmoto))
+        println(showInfoVehicle(ftruck))
 
     }
   
@@ -50,6 +57,24 @@ object runPM {
         }
   }
 
+  def showInfoVehicle(v : vehicle) : String = {
 
+    v match {
+        case automobile(numSeats, numWheels) => s"the automobile have $numSeats seats and $numWheels wheels"
+        case motorcycle(numSeats, numWheels) => s"the motorcycle have $numSeats seats and $numWheels wheels"
+        case truck(numSeats, numWheels) => s"the truck have $numSeats seats and $numWheels wheels"
+    }
+
+
+  }
   
 }
+
+
+sealed trait vehicle
+
+case class automobile(numSeats: Int,  numWheels: Int) extends vehicle
+case class motorcycle(numSeats: Int, numWheels: Int) extends vehicle
+case class truck(numSeats: Int, numWheels: Int) extends vehicle
+
+
