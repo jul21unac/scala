@@ -21,6 +21,14 @@ object runPM {
         println(showInfoVehicle(fmoto))
         println(showInfoVehicle(ftruck))
 
+        val sente: String = "Alice earns 5000 dollars per month"
+        val pattern = "(.+) earns (.+) dollars per month".r
+        println(
+        sente match {
+            case pattern(name, amount) => s"$name's salary is $amount dollars"
+            case _ => "the sentence is not in the correct format"
+        }
+        )
     }
   
   def matchRomanNumber( num: Int) : String={
