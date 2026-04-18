@@ -71,6 +71,8 @@ services:
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
       - TSERVER_ARGS=--unlock_unsafe_flags=true
+        --rpc_advertised_addresses=kudu-tserver-1:7050
+        --webserver_port=8050
 
   impala:
     image: apache/kudu:impala-latest
