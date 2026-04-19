@@ -15,7 +15,7 @@ val KUDU_MASTERS = "kudu-master-1:7051,kudu-master-2:7052,kudu-master-3:7053"
 def main(args: Array[String]): Unit = {
 
 
-println(InetAddress.getByName("kudu-tserver-1"))
+
     val spark = SparkSession.builder()
       .appName("CreateKuduTable")
       .master("local[*]")
