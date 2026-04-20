@@ -10,7 +10,7 @@ object RunKuduTest {
 
 
 
-val KUDU_MASTERS = "kudu-master-1:7051,kudu-master-2:7052,kudu-master-3:7053"
+val KUDU_MASTERS = "localhost:7051,localhost:7052,localhost:7053"
 
 def main(args: Array[String]): Unit = {
 
@@ -38,7 +38,7 @@ def main(args: Array[String]): Unit = {
 
     val tableOptions = new CreateTableOptions()
       .setNumReplicas(1)                          // 1 replica porque solo tienes 1 tserver
-      .addHashPartitions(util.Arrays.asList("id"), 4)  // 4 particiones por hash
+      .addHashPartitions(util.Arrays.asList("id"), 2)  // Mínimo 2 buckets requerido por Kudu
 
     // 4. Crear la tabla si no existe
     if (!kuduContext.tableExists(tableName)) {

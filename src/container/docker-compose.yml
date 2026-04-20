@@ -14,7 +14,7 @@ services:
       - kudu-net
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
-      - MASTER_ARGS= --rpc_authentication=disabled --rpc_bind_addresses=0.0.0.0:7051 --rpc_advertised_addresses=kudu-master-1:7051 --webserver_port=8051  --unlock_unsafe_flags=true
+      - MASTER_ARGS=--rpc_authentication=disabled --rpc_bind_addresses=0.0.0.0:7051 --rpc_advertised_addresses=kudu-master-1:7051 --master_addresses=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051 --webserver_port=8051 --unlock_unsafe_flags=true
 
   kudu-master-2:
     image: apache/kudu:latest
@@ -31,7 +31,7 @@ services:
       - kudu-net
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
-      - MASTER_ARGS=  --rpc_authentication=disabled  --rpc_bind_addresses=0.0.0.0:7051 --rpc_advertised_addresses=kudu-master-2:7051 --webserver_port=8051   --unlock_unsafe_flags=true
+      - MASTER_ARGS=--rpc_authentication=disabled --rpc_bind_addresses=0.0.0.0:7051 --rpc_advertised_addresses=kudu-master-2:7051 --master_addresses=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051 --webserver_port=8051 --unlock_unsafe_flags=true
 
   kudu-master-3:
     image: apache/kudu:latest
@@ -48,7 +48,7 @@ services:
       - kudu-net
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
-      - MASTER_ARGS=--rpc_authentication=disabled   --rpc_bind_addresses=0.0.0.0:7051 --rpc_advertised_addresses=kudu-master-3:7051 --webserver_port=8051  --unlock_unsafe_flags=true
+      - MASTER_ARGS=--rpc_authentication=disabled --rpc_bind_addresses=0.0.0.0:7051 --rpc_advertised_addresses=kudu-master-3:7051 --master_addresses=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051 --webserver_port=8051 --unlock_unsafe_flags=true
 
   kudu-tserver-1:
     image: apache/kudu:latest
@@ -70,9 +70,7 @@ services:
       - kudu-net
     environment:
       - KUDU_MASTERS=kudu-master-1:7051,kudu-master-2:7051,kudu-master-3:7051
-      - TSERVER_ARGS=--unlock_unsafe_flags=true
-        --rpc_advertised_addresses=kudu-tserver-1:7050
-        --webserver_port=8050
+      - TSERVER_ARGS=--unlock_unsafe_flags=true --rpc_bind_addresses=0.0.0.0:7050 --rpc_advertised_addresses=localhost:7050 --webserver_port=8050 --webserver_advertised_addresses=localhost:8050
 
   impala:
     image: apache/kudu:impala-latest
