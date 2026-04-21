@@ -10,7 +10,7 @@ object RunKuduTest {
 
 
 
-val KUDU_MASTERS = "localhost:7051,localhost:7052,localhost:7053"
+val KUDU_MASTERS = "127.0.0.1:7051,127.0.0.1:7052,127.0.0.1:7053"
 
 def main(args: Array[String]): Unit = {
 
@@ -18,8 +18,16 @@ def main(args: Array[String]): Unit = {
 
     val spark = SparkSession.builder()
       .appName("CreateKuduTable")
-      .master("local[*]")
+       .master("local[*]")
+      .config("spark.driver.host", "127.0.0.1")
+      .config("hive.metastore.uris", "thrift://127.0.0.1:9083")
+      .config("spark.kudu.operation.timeout.ms", "60000")
+      .config("spark.kudu.admin.operation.timeout.ms", "60000")
+      .enableHiveSupport()  // sin .config("spark.sql.warehouse.dir", ...)
       .getOrCreate()
+     /* .appName("CreateKuduTable")
+      .master("local[*]")
+      .getOrCreate()*/
 
     // 1. Crear el KuduContext apuntando a tus masters
     val kuduContext = new KuduContext(KUDU_MASTERS, spark.sparkContext)
@@ -56,9 +64,9 @@ def main(args: Array[String]): Unit = {
       (3, "Carlos", 300.0)
     ).toDF("id", "nombre", "valor")
 
-    kuduContext.insertRows(datos, tableName)
+ /*   kuduContext.insertRows(datos, tableName)
     println("✅ Datos insertados")
-
+*/
     // 6. Leer la tabla de vuelta
     spark.read
       .options(Map("kudu.master" -> KUDU_MASTERS, "kudu.table" -> tableName))
