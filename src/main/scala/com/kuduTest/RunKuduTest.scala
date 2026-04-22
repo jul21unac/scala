@@ -32,7 +32,7 @@ def main(args: Array[String]): Unit = {
     // 1. Crear el KuduContext apuntando a tus masters
     val kuduContext = new KuduContext(KUDU_MASTERS, spark.sparkContext)
 
-    val tableName = "test_tabla"
+    val tableName = "staging.test_tabla"
 
     // 2. Definir el schema
     val schema = StructType(Seq(
@@ -67,12 +67,20 @@ def main(args: Array[String]): Unit = {
  /*   kuduContext.insertRows(datos, tableName)
     println("✅ Datos insertados")
 */
+    datos.write.format("org.apache.kudu.spark.kudu")
+    .option("kudu.master", KUDU_MASTERS)
+    .option("kudu.table", tableName)  
+    .mode("append")  // Puedes usar "append" para añadir sin borrar los existentes
+    .save()
+
+     println("✅ Datos insertados usando DataFrame API")
     // 6. Leer la tabla de vuelta
-    spark.read
+   val df_read = spark.read
       .options(Map("kudu.master" -> KUDU_MASTERS, "kudu.table" -> tableName))
-      .format("kudu")
+      .format("org.apache.kudu.spark.kudu")
       .load()
-      .show()
+      
+      df_read.show()  // Muestra los datos leídos de Kudu
 
     spark.stop()
   }
