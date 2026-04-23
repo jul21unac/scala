@@ -34,6 +34,8 @@ def main(args: Array[String]): Unit = {
 
     val tableName = "staging.test_tabla"
 
+
+
     // 2. Definir el schema
     val schema = StructType(Seq(
       StructField("id",     IntegerType, nullable = false),
@@ -45,7 +47,7 @@ def main(args: Array[String]): Unit = {
     val primaryKey = List("id")
 
     val tableOptions = new CreateTableOptions()
-      .setNumReplicas(1)                          // 1 replica porque solo tienes 1 tserver
+      .setNumReplicas(1)                          
       .addHashPartitions(util.Arrays.asList("id"), 2)  // Mínimo 2 buckets requerido por Kudu
 
     // 4. Crear la tabla si no existe
@@ -70,7 +72,7 @@ def main(args: Array[String]): Unit = {
     datos.write.format("org.apache.kudu.spark.kudu")
     .option("kudu.master", KUDU_MASTERS)
     .option("kudu.table", tableName)  
-    .mode("append")  // Puedes usar "append" para añadir sin borrar los existentes
+    .mode("append")  
     .save()
 
      println("✅ Datos insertados usando DataFrame API")
@@ -85,6 +87,9 @@ def main(args: Array[String]): Unit = {
     spark.stop()
   }
     
+    def createKuduTable(kuduContext: KuduContext, tableName: String): Unit = {
+ 
+    }
 }
 
 
