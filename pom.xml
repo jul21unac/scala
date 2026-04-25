@@ -52,6 +52,17 @@
             <version>3.5.8</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+        <dependency>
+    <groupId>org.apache.kudu</groupId>
+    <artifactId>kudu-spark3_2.12</artifactId>
+    <version>1.18.1</version>
+    <scope>compile</scope>
+</dependency>
     </dependencies>
 
     <build>
