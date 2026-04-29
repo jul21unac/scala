@@ -1,7 +1,7 @@
 package com.kuduTest
 
 class createTableKudu {
-  
+  /*
   def createKtable ( val  df : org.apache.spark.sql.DataFrame, val tableName: String, 
                     val kuduContext: org.apache.kudu.spark.kudu.KuduContext,
                     val primaryKey: List[a]): Unit = {
@@ -21,5 +21,5 @@ class createTableKudu {
       println(s"⚠️  La tabla '$tableName' ya existe")
     }
   }
-
+*/
 }
