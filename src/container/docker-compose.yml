@@ -111,16 +111,16 @@ services:
 
 
   hive-metastore:
-    image: apache/hive:4.0.0
+    image: apache/hive:3.1.3   # ← compatible con Impala CDH6 (Hive 2.x)
     container_name: hive-metastore
     ports:
       - "9083:9083"
     environment:
       - SERVICE_NAME=metastore
     volumes:
-      - hive-warehouse:/opt/hive/data/warehouse  # Persiste datos
+      - hive-warehouse:/opt/hive/data/warehouse
     networks:
-      - kudu-net    
+      - kudu-net
   
 volumes:
   hive-warehouse:
