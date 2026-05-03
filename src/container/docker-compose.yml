@@ -77,9 +77,6 @@ services:
     container_name: kudu-impala
     command: 
         - "impala"
-        - "--hive_metastore_uris=thrift://hive-metastore:9083"
-        - "--unlock_unsafe_flags=true"
-        - "--webserver_interface=0.0.0.0"
     depends_on:
       kudu-tserver-1:
         condition: service_started
@@ -118,9 +115,9 @@ services:
     environment:
       - SERVICE_NAME=metastore
     volumes:
-      - hive-warehouse:/opt/hive/data/warehouse  # Persiste datos
+      - hive-warehouse:/opt/hive/data/warehouse
     networks:
-      - kudu-net    
+      - kudu-net
   
 volumes:
   hive-warehouse:
