@@ -71,13 +71,14 @@ object LoadCSVToKudu {
           setNullableStateOfColumn(tempDF, key, nullable = false)
         }
 
-        println(s"   Filas: ${df.count()}")
-        println(s"   Columnas: ${df.columns.mkString(", ")}")
+        println(s"   Filas: ${df_not_key_null.count()}")
+        println(s"   Columnas: ${df_not_key_null.columns.mkString(", ")}")
+        println(s"   shcema: ${df_not_key_null.schema}")
 
         // Crear tabla Kudu usando la clase createTableKudu
         tableCreator.createTable(
           tableName = tableName,
-          dataFrame = df,
+          dataFrame = df_not_key_null,
           primaryKeys = primaryKeys,
           numReplicas = 1
         )
@@ -90,7 +91,7 @@ object LoadCSVToKudu {
           .mode("append")
           .save()
 
-        println(s"   ✅ Insertados ${df.count()} registros en '$tableName'")
+        println(s"   ✅ Insertados ${df_not_key_null.count()} registros en '$tableName'")
 
       } catch {
         case e: Exception =>
