@@ -4,6 +4,10 @@ import org.apache.kudu.spark.kudu._
 import org.apache.spark.sql.SparkSession
 import java.io.File
 
+import org.apache.spark.sql.types.{StructField, StructType}
+import org.apache.spark.sql.{DataFrame, SQLContext}
+import org.apache.spark.{SparkConf, SparkContext}
+
 object LoadCSVToKudu {
 
   val KUDU_MASTERS = "127.0.0.1:7051,127.0.0.1:7052,127.0.0.1:7053"
@@ -12,7 +16,7 @@ object LoadCSVToKudu {
 
   // Mapeo de archivos CSV con sus claves primarias
   val csvFiles = Map(
-    "olist_customers_dataset.csv" -> List("customer_id"),
+    "olist_customers_dataset.csv" -> List("customer_unique_id"),
     "olist_geolocation_dataset.csv" -> List("geolocation_zip_code_prefix"),
     "olist_order_items_dataset.csv" -> List("order_id", "order_item_id"),
     "olist_order_payments_dataset.csv" -> List("order_id", "payment_sequential"),
@@ -63,6 +67,10 @@ object LoadCSVToKudu {
           .option("inferSchema", "true")
           .csv(csvPath)
 
+        val df_not_key_null = primaryKeys.foldLeft(df) { (tempDF, key) =>
+          setNullableStateOfColumn(tempDF, key, nullable = false)
+        }
+
         println(s"   Filas: ${df.count()}")
         println(s"   Columnas: ${df.columns.mkString(", ")}")
 
@@ -97,4 +105,17 @@ object LoadCSVToKudu {
 
     spark.stop()
   }
+
+  def setNullableStateOfColumn( df: DataFrame, cn: String, nullable: Boolean) : DataFrame = {
+
+  // get schema
+  val schema = df.schema
+  // modify [[StructField] with name `cn`
+  val newSchema = StructType(schema.map {
+    case StructField( c, t, _, m) if c.equals(cn) => StructField( c, t, nullable = nullable, m)
+    case y: StructField => y
+  })
+  // apply new schema
+  df.sqlContext.createDataFrame( df.rdd, newSchema )
+}
 }

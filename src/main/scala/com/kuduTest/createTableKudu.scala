@@ -1,8 +1,10 @@
 package com.kuduTest
 
 import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.types.StructType
 import org.apache.kudu.spark.kudu.KuduContext
 import org.apache.kudu.client.CreateTableOptions
+import java.util
 
 /**
  * Clase genérica para crear tablas en Kudu
@@ -25,10 +27,24 @@ class createTableKudu(kuduContext: KuduContext) {
     numReplicas: Int = 1
   ): Unit = {
     try {
-      val schema = dataFrame.schema
+      // Modificar el schema para que las claves primarias no sean nulas
+      val schema = StructType(
+        dataFrame.schema.fields.map { field =>
+          if (primaryKeys.contains(field.name)) {
+            field.copy(nullable = false)  // La clave primaria NO puede ser NULL
+          } else {
+            field
+          }
+        }
+      )
       
       val tableOptions = new CreateTableOptions()
         .setNumReplicas(numReplicas)
+      
+      // Agregar particionamiento por hash usando la primera columna de clave primaria
+      if (primaryKeys.nonEmpty) {
+        tableOptions.addHashPartitions(util.Arrays.asList(primaryKeys.head), 2)
+      }
       
       // Crear la tabla si no existe
       if (!kuduContext.tableExists(tableName)) {
