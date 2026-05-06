@@ -5,5 +5,5 @@
 ### Added       
 - Add Pattern Matching for basic data types (int, float, string).
  
-
-
+### Changed 
+- Initial release with basic pattern matching capabilities.
