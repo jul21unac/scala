@@ -15,9 +15,9 @@ class KuduTableReader(spark: SparkSession) {
    */
   def readTable(tableName: String): DataFrame = {
     spark.read
-      .options(Map("kudu.master" -> KUDU_MASTERS))
-      .format("kudu")
-      .load(tableName)
+      .options(Map("kudu.master" -> KUDU_MASTERS, "kudu.table" -> tableName))
+      .format("org.apache.kudu.spark.kudu")
+      .load()
   }
 
 }
