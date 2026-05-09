@@ -18,3 +18,7 @@ Run  com.tuplesPractice.tuplesRun to see the output of tuples practice examples.
 ## Collections
 
 ## Pattern Matching
+
+## kudu tables
+
+## Hive tables
