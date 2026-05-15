@@ -1,6 +1,6 @@
 package com.Singlenton
 
-class Customer( val CustomerID: String, val Customer_unique_id: String
+case class Customer( val CustomerID: String, val Customer_unique_id: String
                     , val Customer_zip_code_prefix: String, val Customer_city: String, val Customer_state: String) {
   
 
@@ -9,7 +9,7 @@ class Customer( val CustomerID: String, val Customer_unique_id: String
 
 object CreateCustomer{
 
-    def factoryRamdonData() : Customer = {
+    def factoryRandomData() : Customer = {
         val id = scala.util.Random.alphanumeric.take(10).mkString
         val uniqueId = scala.util.Random.alphanumeric.take(15).mkString
         val zipCode = scala.util.Random.nextInt(99999).toString
