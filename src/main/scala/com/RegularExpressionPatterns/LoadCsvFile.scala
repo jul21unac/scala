@@ -3,7 +3,7 @@ import scala.io.Source
 
 class LoadCsvFile {
 
-    def loadCsv(filePath: String): List[Map[String, String]] = {
+    def loadCsv(filePath: String): Unit = {
         val source = Source.fromFile(filePath)
         val lines = source.getLines().toList
         source.close()
@@ -12,12 +12,11 @@ class LoadCsvFile {
             return List.empty
         }
 
-        val headers = lines.head.split(",").map(_.trim)
-        val data = lines.tail.map { line =>
-            val values = line.split(",").map(_.trim)
-            headers.zip(values).toMap
+        for (line <- lines) {
+            val fields = line.split(",").map(_.trim)
+            println(fields.mkString(", "))
         }
-        data
+        
     }
   
 }
