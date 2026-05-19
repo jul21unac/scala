@@ -9,12 +9,14 @@ class LoadCsvFile {
         source.close()
 
         if (lines.isEmpty) {
-            return List.empty
+             List.empty
         }
-
+        var i = 0
         for (line <- lines) {
             val fields = line.split(",").map(_.trim)
-            println(fields.mkString(", "))
+            //println(fields.mkString(", "))
+             i=i+1
+            println( s"Line $i: $line" )
         }
         
     }
