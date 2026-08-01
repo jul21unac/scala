@@ -4,7 +4,7 @@ case class phone(num_ber: String, owner: String, first_phrase: String)
 
 case class restaurant(name: String, cuisine: String, rating: Double)
 
-case class hotel(name: String, start: Int , numRooms: Int, workers: Int ,  floors: Imt )
+case class hotel(name: String, start: Double , numRooms: Double, workers: Double ,  floors: Double )
 
 
 object CcRun {
@@ -31,7 +31,7 @@ object CcRun {
         println(restou.cuisine)
         println(restou.rating)
 
-        val hotel = hotel( "El cariñoso", 5, 400, 800, 80 )        
+        val hotel_1 = hotel( "El cariñoso", 5, 400, 800, 80 )
 
     }
 }
