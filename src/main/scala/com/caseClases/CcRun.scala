@@ -4,6 +4,9 @@ case class phone(num_ber: String, owner: String, first_phrase: String)
 
 case class restaurant(name: String, cuisine: String, rating: Double)
 
+case class hotel(name: String, start: Int , numRooms: Int, workers: Int ,  floors: Imt )
+
+
 object CcRun {
     def main(args: Array[String]): Unit = {
         
@@ -27,7 +30,8 @@ object CcRun {
         println(restou.name)
         println(restou.cuisine)
         println(restou.rating)
-        
+
+        val hotel = hotel( "El cariñoso", 5, 400, 800, 80 )        
 
     }
 }
