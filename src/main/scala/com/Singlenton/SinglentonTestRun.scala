@@ -6,8 +6,11 @@ object SinglentonTestRun {
 
     val customerNew = CreateCustomer.factoryRandomData()
     val prodcat = CreateProductCategory.factoryRandomData()
+    val per = CreatePersom.factoryRandomData()
     println(customerNew)
     println(prodcat.productCategoryNameEnglish)
+    println(per)
+
     
   }
 
