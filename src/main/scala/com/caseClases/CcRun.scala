@@ -1,3 +1,5 @@
+import com.Singlenton.CreatePerson
+
 case class Discotec(music: String)
 
 case class phone(num_ber: String, owner: String, first_phrase: String)
@@ -32,6 +34,13 @@ object CcRun {
         println(restou.rating)
 
         val hotel_1 = hotel( "El cariñoso", 5, 400, 800, 80 )
+        println(hotel_1)
+
+        val person_1 = CreatePerson.factoryRandomData()
+        val person_2 = CreatePerson.factoryRandomData()
+
+        println(person_1)
+        println(person_2)
 
     }
 }
