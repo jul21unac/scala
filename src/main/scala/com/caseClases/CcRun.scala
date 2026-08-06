@@ -1,4 +1,4 @@
-import com.Singlenton.CreatePerson
+import com.Singlenton._
 
 case class Discotec(music: String)
 
@@ -42,6 +42,9 @@ object CcRun {
         println(person_1)
         println(person_2)
 
+        val transp = createTransportation.factoryRamdonData()
+
+        println(transp)
     }
 }
 
