@@ -1,0 +1,22 @@
+package com.traitPractice
+
+class Bolivia extends Country {
+
+  val Capital: String = ???
+
+  val budget: Integer = ???
+
+  def createUniversity(qty: Integer, UniBudget: Integer): Unit = {
+
+
+
+  }
+
+  def createSchools(qty: Integer, schoolBudget: Integer): Unit = {
+
+  }
+
+  def createHospitals(qty: Integer, HealtBudget: Integer): Unit = {
+
+  }
+}

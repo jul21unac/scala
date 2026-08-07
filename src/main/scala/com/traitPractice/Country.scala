@@ -3,7 +3,8 @@ package com.traitPractice
 trait Country {
 
   val Capital : String
-
-  def createUniversity( qty : Integer) : Unit
-  def createSchools(qty : Integer) : Unit
+  val budget :Integer
+  def createUniversity( qty : Integer, UniBudget:Integer) : Unit
+  def createSchools(qty : Integer, schoolBudget : Integer) : Unit
+  def createHospitals(qty :Integer, HealtBudget : Integer ) : Unit
 }
