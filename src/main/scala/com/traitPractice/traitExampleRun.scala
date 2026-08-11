@@ -6,7 +6,8 @@ object traitExampleRun {
 
     val Bol = new Bolivia()
 
-    Bol.createUniversity(2,800)
+    Bol.createUniversity(1,800)
+    Bol.createHospitals(1,900)
 
 
 
