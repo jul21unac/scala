@@ -1,3 +1,5 @@
+package com.basics
+
 class Animal {
 
   def printAnimalData(typ : String , color: String = "Brown", nickName: String): Unit = {

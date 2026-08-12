@@ -1,3 +1,5 @@
+package com.basics
+
 class HappyNewYear (name: String, next_word: String) {
 
   def ChineseYear(pref: String) : Unit =

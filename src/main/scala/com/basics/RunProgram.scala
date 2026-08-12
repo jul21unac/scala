@@ -1,3 +1,5 @@
+package com.basics
+
 object RunProgram {
 
   def main(args: Array[String] ) : Unit ={

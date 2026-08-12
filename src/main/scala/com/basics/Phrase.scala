@@ -1,3 +1,5 @@
+package com.basics
+
 class Phrase {
   private var _wor_1 = "nothing"
   private var _wor_2 = "anything"

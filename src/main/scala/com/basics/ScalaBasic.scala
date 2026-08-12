@@ -1,6 +1,7 @@
+package com.basics
+
 import com.traitPractice._
 
-import java.security.KeyStore.TrustedCertificateEntry
 import scala.collection.mutable.ArrayBuffer
 
 object ScalaBasic {
@@ -137,7 +138,7 @@ object ScalaBasic {
     print("=" * 50)
     print("\n")
 
-    val phrase: String = " New Phrase"
+    val phrase: String = " New com.basics.Phrase"
     val int_practice: Int = 123
     val char_prractice: Char = 'z'
     val boolean_practice: Boolean = true

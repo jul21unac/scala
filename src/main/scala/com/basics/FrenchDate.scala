@@ -1,5 +1,7 @@
-import java.time.format.{DateTimeFormatter, FormatStyle}
+package com.basics
+
 import java.time.LocalDate
+import java.time.format.{DateTimeFormatter, FormatStyle}
 import java.util.Locale._
 
 object FrenchDate {

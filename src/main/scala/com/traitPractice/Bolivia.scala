@@ -4,7 +4,7 @@ class Bolivia extends Country {
 
   val Capital: String = "La Paz"
 
-  val budget: Integer = 17000
+  val budget: Integer = 1700
 
   val costOfUniversity:Int = 500
 
@@ -13,6 +13,8 @@ class Bolivia extends Country {
   val costOfHospitals:Int = 800
 
   var costAcumulate:Int = 0
+
+  var budgetAcumulate: Int = 0
 
   def createUniversity(qty: Integer, UniBudget: Integer): Unit = {
 
@@ -28,20 +30,26 @@ class Bolivia extends Country {
   def createHospitals(qty: Integer, HealtBudget: Integer): Unit = {
     calculateValidate(qty,costOfHospitals,HealtBudget,"Hospital")
   }
-  //TODO : adapt for all the methods
-  //TODO: acumulate the costs
-  def calculateValidate(qt:Integer,cost: Integer, partialBudget:Integer, Orga : String): Unit= {
 
+  def calculateValidate(qt:Integer,cost: Integer, partialBudget:Integer, Orga : String): Unit= {
+    println("acumulado")
+    println(costAcumulate + qt*cost  )
+    println(budget)
     if (partialBudget > budget) {
           println("We don't have that budget for "+ Orga)
-    }  else if( qt*cost > partialBudget)
+    } else if ( budgetAcumulate + partialBudget> budget )
+    {       println("We don't have that budget for "+ Orga)  }
+    else if( qt*cost > partialBudget)
       {  println("Reduce the quantity of "+ Orga ) }
-    else if( costAcumulate + qt*cost > budget)
+    else if( (costAcumulate + qt*cost) > budget)
     {  println("Reduce the quantity of "+ Orga ) }
     else
-      {costAcumulate = costAcumulate + qt*cost
+      {
+        budgetAcumulate= budgetAcumulate + partialBudget
+        costAcumulate = costAcumulate + qt*cost
         println(s"Proceed to create  $qt of $Orga")
       }
+      println(costAcumulate)
 
 
   }

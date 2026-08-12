@@ -1,3 +1,5 @@
+package com.basics
+
 class TwoWord(var word_1: String, var word_2: String) {
 
   def addAnotherWord(  word_3: String,  word_4: String ): Unit = {

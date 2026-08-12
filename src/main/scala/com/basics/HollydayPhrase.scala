@@ -1,3 +1,5 @@
+package com.basics
+
 trait HollydayPhrase {
 
   def Regards( name: String ): Unit = {
