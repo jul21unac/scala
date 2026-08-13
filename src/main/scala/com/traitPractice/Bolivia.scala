@@ -4,7 +4,7 @@ class Bolivia extends Country {
 
   val Capital: String = "La Paz"
 
-  val budget: Integer = 1700
+  var budget: Integer = 1700
 
   val costOfUniversity:Int = 500
 
@@ -50,6 +50,11 @@ class Bolivia extends Country {
         println(s"Proceed to create  $qt of $Orga")
       }
       println(costAcumulate)
+
+
+  }
+
+  def increaseBudget(qty: Integer): Unit = {
 
 
   }
