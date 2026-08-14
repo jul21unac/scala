@@ -1,6 +1,10 @@
 # Changelog     
 =================
 
+## [1.1.1] 2026-08-14
+
+add Scala Basics
+
 ## [1.1.0] - 2026-07-31
 
 add data to clean with scala

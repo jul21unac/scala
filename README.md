@@ -22,3 +22,5 @@ Run  com.tuplesPractice.tuplesRun to see the output of tuples practice examples.
 ## kudu tables
 
 ## Hive tables
+
+## Scala Basics
