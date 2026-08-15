@@ -8,6 +8,7 @@ case class restaurant(name: String, cuisine: String, rating: Double)
 
 case class hotel(name: String, start: Double , numRooms: Double, workers: Double ,  floors: Double )
 
+case class cinema(name: String, address: String, numberOfSala:Integer, movies : Array[String])
 
 object CcRun {
     def main(args: Array[String]): Unit = {
