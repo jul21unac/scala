@@ -6,46 +6,56 @@ case class phone(num_ber: String, owner: String, first_phrase: String)
 
 case class restaurant(name: String, cuisine: String, rating: Double)
 
-case class hotel(name: String, start: Double , numRooms: Double, workers: Double ,  floors: Double )
+case class hotel(
+    name: String,
+    start: Double,
+    numRooms: Double,
+    workers: Double,
+    floors: Double
+)
 
-case class cinema(name: String, address: String, numberOfSala:Integer, movies : Array[String])
+case class cinema(
+    name: String,
+    address: String,
+    numberOfSala: Integer,
+    movies: Array[String]
+)
 
 object CcRun {
-    def main(args: Array[String]): Unit = {
-        
-        val discotec = Discotec("salsa")
-        val discotec3 = Discotec("Rock")
-        println(discotec.music) 
-        println(discotec3.music)
+  def main(args: Array[String]): Unit = {
 
-        val phone1 = phone("1234567890", "Alice", "Hello, this is Alice!")
-        val phone2 = phone("1234567890", "Alice", "Hello, this is Alice!")
+    val discotec = Discotec("salsa")
+    val discotec3 = Discotec("Rock")
+    println(discotec.music)
+    println(discotec3.music)
 
-        println(phone1.num_ber == phone2.num_ber)
+    val phone1 = phone("1234567890", "Alice", "Hello, this is Alice!")
+    val phone2 = phone("1234567890", "Alice", "Hello, this is Alice!")
 
-        val phone3 =  phone1.copy( owner ="David", first_phrase = phone1.owner)  
+    println(phone1.num_ber == phone2.num_ber)
 
-        println(phone3.owner)
-        println(phone3.first_phrase)  
-        println(phone3.num_ber)
+    val phone3 = phone1.copy(owner = "David", first_phrase = phone1.owner)
 
-        val restou = restaurant("Gaitero", "Asturian", 11.5)
-        println(restou.name)
-        println(restou.cuisine)
-        println(restou.rating)
+    println(phone3.owner)
+    println(phone3.first_phrase)
+    println(phone3.num_ber)
 
-        val hotel_1 = hotel( "El cariñoso", 5, 400, 800, 80 )
-        println(hotel_1)
+    val restou = restaurant("Gaitero", "Asturian", 11.5)
+    println(restou.name)
+    println(restou.cuisine)
+    println(restou.rating)
 
-        val person_1 = CreatePerson.factoryRandomData()
-        val person_2 = CreatePerson.factoryRandomData()
+    val hotel_1 = hotel("El cariñoso", 5, 400, 800, 80)
+    println(hotel_1)
 
-        println(person_1)
-        println(person_2)
+    val person_1 = CreatePerson.factoryRandomData()
+    val person_2 = CreatePerson.factoryRandomData()
 
-        val transp = createTransportation.factoryRamdonData()
+    println(person_1)
+    println(person_2)
 
-        println(transp)
-    }
+    val transp = createTransportation.factoryRamdonData()
+
+    println(transp)
+  }
 }
-

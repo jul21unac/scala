@@ -1,0 +1,30 @@
+{
+  "name": "scala-tour",
+  "image": "mcr.microsoft.com/devcontainers/java:3-11-trixie",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": "true",
+      "installGradle": "false"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "scalameta.metals",
+        "vscjava.vscode-java-pack",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+
+  "postCreateCommand": "mvn -B -DskipTests compile",
+  "remoteUser": "vscode"
+}
