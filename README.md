@@ -1,7 +1,7 @@
 # Scala Project 
 ----------
 
-Practice examples from Scala tour and kudu , hive, spark and kafka project  
+Practice examples from Scala tour  
 
 ## Trait practice
 
