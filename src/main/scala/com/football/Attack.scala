@@ -13,5 +13,6 @@ class Attack(
     var Interceptions: Int,
     var Clearances: Int,
     var Blocks: Int,
-    var Fouls: Int
+    var Fouls: Int,
+    var ActualTeam: Team
 ) extends Player

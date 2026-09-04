@@ -5,6 +5,9 @@ object RunFootbal {
   def main(arg: Array[String])
   {
 
+    val RealMadrid =
+      new Team(name = "Real Madrid", league = "La Liga", "Spain", 433)
+
     val Defen_1 = new Defence(
       Name = "Marc Cucurella",
       23,
@@ -18,7 +21,8 @@ object RunFootbal {
       44,
       23,
       34,
-      2
+      2,
+      RealMadrid
     )
 
     println(Defen_1.Name)

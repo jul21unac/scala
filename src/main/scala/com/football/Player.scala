@@ -24,4 +24,6 @@ trait Player {
   var Blocks: Int
   var Fouls: Int
 
+  var ActualTeam: Team
+
 }
