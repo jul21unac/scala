@@ -1,12 +1,37 @@
 package com.football
+import scala.util.Random
 
 object FactoryPlayer {
 
-  def NewPlayer(typePlayer: String): Player = typePlayer.toLowerCase match {
+  val d = 0
+  def NewPlayer(typePlayer: String): Player = {
 
-    case "defence" => new Defence()
-    case "attack"  => new Attack()
-    case _         => throw new IllegalArgumentException("Unknown Player type")
+    val RealMadrid =
+      new Team(name = "Real Madrid", league = "La Liga", "Spain", 433)
+
+    typePlayer.toLowerCase match {
+
+      case "defence" =>
+        new Defence(
+          FutbolData.DefensePlayers(d)._1,
+          getInt(17, 45),
+          "Defence",
+          getInt(50, 100),
+          getInt(0, 50),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          RealMadrid
+        )
+      // case "attack"  => new Attack()
+      case _ => throw new IllegalArgumentException("Unknown Player type")
+
+    }
 
   }
 
