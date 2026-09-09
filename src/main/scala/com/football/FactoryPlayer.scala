@@ -28,7 +28,23 @@ object FactoryPlayer {
           getInt(0, 100),
           RealMadrid
         )
-      // case "attack"  => new Attack()
+      case "attack" =>
+        new Attack(
+          FutbolData.Attack(d)._1,
+          getInt(17, 45),
+          "Defence",
+          getInt(50, 100),
+          getInt(0, 50),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          RealMadrid
+        )
       case _ => throw new IllegalArgumentException("Unknown Player type")
 
     }

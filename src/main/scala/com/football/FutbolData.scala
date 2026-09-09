@@ -77,4 +77,47 @@ object FutbolData {
     ("Domingos Duarte", "Getafe CF")
   )
 
+  val attack: List[(String, String)] = List(
+    // REAL MADRID
+    ("Kylian Mbappé", "Real Madrid"),
+    ("Vinícius Júnior", "Real Madrid"),
+    ("Jude Bellingham", "Real Madrid"),
+    ("Endrick", "Real Madrid"),
+    ("Carlos Espí", "Real Madrid"),
+    ("Yan Diomande", "Real Madrid"),
+
+    // FC BARCELONA
+    ("Gabriel Jesus", "FC Barcelona"), // Fichaje como nuevo '9' [citation:2]
+    ("Lamine Yamal", "FC Barcelona"),
+    ("Raphinha", "FC Barcelona"),
+    ("Ferran Torres", "FC Barcelona"),
+    ("Anthony Gordon", "FC Barcelona"),
+    ("Karim Adeyemi", "FC Barcelona"),
+
+    // ATLÉTICO DE MADRID
+    ("Julián Álvarez", "Atlético de Madrid"),
+    ("Alexander Sørloth", "Atlético de Madrid"),
+    ("Antoine Griezmann", "Atlético de Madrid"),
+
+    // OTROS EQUIPOS DESTACADOS
+    (
+      "Roberto Fernández",
+      "RCD Espanyol"
+    ), // Máximo goleador del Espanyol [citation:12][citation:14]
+    ("Vedat Muriqi", "RCD Mallorca"),
+    ("Ante Budimir", "CA Osasuna"),
+    ("Borja Iglesias", "RC Celta"),
+    ("Gerard Moreno", "Villarreal CF"),
+    ("Nicolas Pépé", "Villarreal CF"),
+    ("Pierre-Emerick Aubameyang", "Deportivo de A Coruña"),
+    ("Hugo Duro", "Valencia CF"),
+    ("Iago Aspas", "RC Celta"),
+    ("Toni Martínez", "Deportivo Alavés"),
+    ("Nico Williams", "Athletic Club"),
+    ("Gorka Guruzeta", "Athletic Club"),
+    ("Enes Ünal", "Getafe CF"),
+    ("Iván Azón", "Getafe CF"), // Debutante en Primera [citation:5]
+    ("Javi Puado", "RCD Espanyol")
+  )
+
 }
