@@ -27,8 +27,11 @@ object RunFootbal {
 
     val defen_2 = FactoryPlayer.NewPlayer("Defence")
 
+    val attPla = FactoryPlayer.NewPlayer("attack")
+
     println(Defen_1.Name)
     println(defen_2.Name)
+    println(attPla.Name)
 
   }
 
