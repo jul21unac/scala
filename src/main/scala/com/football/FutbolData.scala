@@ -87,7 +87,7 @@ object FutbolData {
     ("Yan Diomande", "Real Madrid"),
 
     // FC BARCELONA
-    ("Gabriel Jesus", "FC Barcelona"), // Fichaje como nuevo '9' [citation:2]
+    ("Gabriel Jesus", "FC Barcelona"),
     ("Lamine Yamal", "FC Barcelona"),
     ("Raphinha", "FC Barcelona"),
     ("Ferran Torres", "FC Barcelona"),
@@ -103,7 +103,7 @@ object FutbolData {
     (
       "Roberto Fernández",
       "RCD Espanyol"
-    ), // Máximo goleador del Espanyol [citation:12][citation:14]
+    ),
     ("Vedat Muriqi", "RCD Mallorca"),
     ("Ante Budimir", "CA Osasuna"),
     ("Borja Iglesias", "RC Celta"),
@@ -116,8 +116,31 @@ object FutbolData {
     ("Nico Williams", "Athletic Club"),
     ("Gorka Guruzeta", "Athletic Club"),
     ("Enes Ünal", "Getafe CF"),
-    ("Iván Azón", "Getafe CF"), // Debutante en Primera [citation:5]
+    ("Iván Azón", "Getafe CF"),
     ("Javi Puado", "RCD Espanyol")
+  )
+
+  val teams: List[(String)] = List(
+    "Alavés",
+    "Athletic Club",
+    "Atlético de Madrid",
+    "FC Barcelona",
+    "RC Celta",
+    "Deportivo",
+    "Elche",
+    "RCD Espanyol",
+    "Getafe CF",
+    "Levante",
+    "Málaga",
+    "CA Osasuna",
+    "Racing de Santander",
+    "Rayo Vallecano",
+    "Real Betis",
+    "Real Madrid",
+    "Real Sociedad",
+    "Sevilla FC",
+    "Valencia CF",
+    "Villarreal CF"
   )
 
 }
