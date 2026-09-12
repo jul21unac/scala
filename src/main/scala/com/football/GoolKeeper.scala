@@ -1,24 +1,22 @@
 package com.football
 
-class Defence(
+class GoolKeeper(
     val Name: String,
-
     val age: Int,
-
     val Position: String,
-
     var GamePlay: Int,
-
     var Starts: Int,
-
     var Pass: Int,
 
     var Fouls: Int,
 
     var ActualTeam: Team,
 
-    var Tackles: Int,
-    var Interceptions: Int,
-    var Clearances: Int,
-    var Blocks: Int
+    var CleanSheets: Int,
+
+    var SavePercentage: Int,
+
+    var SweepingActions: Int,
+
+    var PassCompletion: Int
 ) extends Player

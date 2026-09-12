@@ -20,13 +20,11 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
+          RealMadrid,
           getInt(0, 100),
           getInt(0, 100),
           getInt(0, 100),
-          getInt(0, 100),
-          getInt(0, 100),
-          getInt(0, 100),
-          RealMadrid
+          getInt(0, 100)
         )
       case "attack" =>
         new Attack(
@@ -37,13 +35,9 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
+          RealMadrid,
           getInt(0, 100),
-          getInt(0, 100),
-          getInt(0, 100),
-          getInt(0, 100),
-          getInt(0, 100),
-          getInt(0, 100),
-          RealMadrid
+          getInt(0, 100)
         )
       case _ => throw new IllegalArgumentException("Unknown Player type")
 
