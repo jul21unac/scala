@@ -51,4 +51,15 @@ object FactoryPlayer {
 
   }
 
+  def createTemas(): List[(Team)] = {
+    val listTeam: List[(Team)] = ()
+
+    val teams: List[(String)] = FutbolData.teams
+
+    teams.foreach(elem => listTeam.add(FactoryTeam.NewTeam(element)))
+
+    listTeam
+
+  }
+
 }
