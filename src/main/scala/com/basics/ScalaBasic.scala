@@ -20,7 +20,7 @@ object ScalaBasic {
     print("Happy New Year")
     print("=" * 50)
     print("\n")
-    val Happy = new HappyNewYear("Julio"," All the best for you")
+    val Happy = new HappyNewYear("Julio", " All the best for you")
     Happy.ChineseYear("The best")
 
     print("=" * 50)
@@ -51,25 +51,25 @@ object ScalaBasic {
 
     val simC = new SimpleClass()
 
-    val tw = new TwoWord( "hap","birth" )
+    val tw = new TwoWord("hap", "birth")
     println(tw.toString)
     println(tw.word_1)
-    tw.addAnotherWord("py","day")
+    tw.addAnotherWord("py", "day")
     println(tw.toString)
 
-    var wo = new Words(fw="third")
+    var wo = new Words(fw = "third")
     println(wo)
     var phra = new Phrase
     phra.wor_1 = "hola"
     println(phra)
     var phra2 = new Phrase
     phra2.wor_1 = "civil"
-    phra2.wor_2 =  "war"
+    phra2.wor_2 = "war"
 
     var ani = new Animal
     ani.printAnimalData(nickName = "Gordo", typ = "Cat")
-    ani.printAnimalData( typ = "Cat", nickName = "Gordo")
-    ani.printAnimalData( color = "White ",typ = "Cat", nickName = "Gordo")
+    ani.printAnimalData(typ = "Cat", nickName = "Gordo")
+    ani.printAnimalData(color = "White ", typ = "Cat", nickName = "Gordo")
 
     var wg = new WordGenerator(List("blue", "red", "green", "yellow"))
     println(wg.nextW())
@@ -79,8 +79,8 @@ object ScalaBasic {
     println(wg.nextW())
     println(wg.nextW())
 
-    val madrid =new  Madrid("España")
-    val paris =new  Paris("Francia")
+    val madrid = new Madrid("España")
+    val paris = new Paris("Francia")
     val Lands = ArrayBuffer.empty[City]
     Lands.append(madrid)
     Lands.append(paris)
@@ -91,34 +91,29 @@ object ScalaBasic {
   def home: String = System.getProperty("user.home")
 
   def getCubeString(num: Double): String = {
-    val cube = num*num*num
+    val cube = num * num * num
     cube.toString
   }
 
-  def compareCoordinate() : Unit= {
-    val coordinate_1 = Coordinate(2,4)
-    val coordinate_2 = Coordinate(2,4)
-    val coordinate_3 = Coordinate(2,5)
+  def compareCoordinate(): Unit = {
+    val coordinate_1 = Coordinate(2, 4)
+    val coordinate_2 = Coordinate(2, 4)
+    val coordinate_3 = Coordinate(2, 5)
 
-    if (coordinate_1 == coordinate_2)
-    {
+    if (coordinate_1 == coordinate_2) {
       println(s"$coordinate_1 are equal to $coordinate_2")
-    }else
-    {
+    } else {
       println(s"$coordinate_1 are different to $coordinate_2")
     }
 
-    if (coordinate_1 == coordinate_3)
-    {
+    if (coordinate_1 == coordinate_3) {
       println(s"$coordinate_1 are equal to $coordinate_3")
-    }
-    else
-    {
+    } else {
       println(s"$coordinate_1 are different to $coordinate_3")
     }
 
   }
-  def traitPractice() : Unit = {
+  def traitPractice(): Unit = {
 
     print("=" * 50)
     print("Traits Example")
@@ -131,7 +126,7 @@ object ScalaBasic {
     Feliz.Regards(" Julio")
 
   }
-  def typesPractice() : Unit = {
+  def typesPractice(): Unit = {
 
     print("=" * 50)
     print("Types Practice")
@@ -144,13 +139,17 @@ object ScalaBasic {
     val boolean_practice: Boolean = true
     val float_practice: Float = 3.5623f
     val double_practice: Double = 3.44
-    val short_practice: Short= 4.55.toShort
+    val short_practice: Short = 4.55.toShort
 
     val lista: List[Any] = List(
-      phrase, int_practice,char_prractice, boolean_practice,
+      phrase,
+      int_practice,
+      char_prractice,
+      boolean_practice,
       () => "an anonymous function returning a string",
-      float_practice, double_practice, short_practice
-
+      float_practice,
+      double_practice,
+      short_practice
     )
 
     lista.foreach(element => println(element))
@@ -178,7 +177,6 @@ object ScalaBasic {
     val exeInte: Int = exechar.toInt
     println(exechar)
     println(exeInte)
-
 
   }
 
