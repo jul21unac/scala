@@ -10,5 +10,13 @@ class Midfield(
 
     var Fouls: Int,
 
-    var ActualTeam: Team
+    var ActualTeam: Team,
+
+    var passCompletionRate: Int,
+
+    var progressivePasses: Int,
+
+    var expectedAssists: Int,
+
+    var finalThirdEntries: Int
 ) extends Player {}

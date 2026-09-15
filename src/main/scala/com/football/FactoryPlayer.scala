@@ -16,7 +16,7 @@ object FactoryPlayer {
 
       case "defence" =>
         new Defence(
-          FutbolData.DefensePlayers(d)._1,
+          FootbalData.DefensePlayers(d)._1,
           getInt(17, 45),
           "Defence",
           getInt(50, 100),
@@ -31,7 +31,7 @@ object FactoryPlayer {
         )
       case "attack" =>
         new Attack(
-          FutbolData.attack(d)._1,
+          FootbalData.attack(d)._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
@@ -57,7 +57,7 @@ object FactoryPlayer {
   def createTeams(): ArrayBuffer[(Team)] = {
     val listTeam = ArrayBuffer.empty[Team]
 
-    val teams: List[(String)] = FutbolData.teams
+    val teams: List[(String)] = FootbalData.teams
 
     teams.foreach(elem => listTeam.append(FactoryTeam.NewTeam(elem)))
 

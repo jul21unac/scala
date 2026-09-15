@@ -1,6 +1,6 @@
 package com.football
 
-class GoolKeeper(
+class GoalKeeper(
     val Name: String,
     val age: Int,
     val Position: String,

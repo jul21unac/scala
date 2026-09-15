@@ -1,6 +1,6 @@
 package com.football
 
-object FutbolData {
+object FootbalData {
 
   val DefensePlayers: List[(String, String)] = List(
     // FC BARCELONA
@@ -141,6 +141,56 @@ object FutbolData {
     "Sevilla FC",
     "Valencia CF",
     "Villarreal CF"
+  )
+
+  val goalkeeper: List[(String, String)] = List(
+    ("Thibaut Courtois", "Real Madrid"),
+    ("Andriy Lunin", "Real Madrid"),
+    ("Joan García", "FC Barcelona"),
+    ("Wojciech Szczęsny", "FC Barcelona"),
+    ("Jan Oblak", "Atlético de Madrid"),
+    ("Juan Musso", "Atlético de Madrid"),
+    ("Unai Simón", "Athletic Club"),
+    ("Julen Agirrezabala", "Athletic Club"),
+    ("Álex Remiro", "Real Sociedad"),
+    ("Unai Marrero", "Real Sociedad"),
+    ("Álvaro Vallés", "Real Betis"),
+    ("Rui Silva", "Real Betis"),
+    ("Odysseas Vlachodimos", "Sevilla FC"),
+    ("Ørjan Nyland", "Sevilla FC"),
+    ("Fran González", "Sevilla FC"),
+    ("Antonio Sivera", "Alavés"),
+    ("Jesús Owono", "Alavés"),
+    ("David Soria", "Getafe CF"),
+    ("Juanmi Latasa", "Getafe CF"),
+    ("Sergio Herrera", "CA Osasuna"),
+    ("Aitor Fernández", "CA Osasuna"),
+    ("Luiz Júnior", "Villarreal CF"),
+    ("Péter Gulácsi", "Villarreal CF"),
+    ("Arnau Tenas", "Villarreal CF"),
+    ("Diego Conde", "Villarreal CF"),
+    ("Andrei Radu", "RC Celta"),
+    ("Ionut Radu", "RC Celta"),
+    ("Vicente Guaita", "RC Celta"),
+    ("Leo Román", "RCD Mallorca"),
+    ("Marko Dmitrović", "Leganés"),
+    ("Juan Soriano", "Leganés"),
+    ("Mathew Ryan", "Levante"),
+    ("Andrés Fernández", "Levante"),
+    ("Dani Cárdenas", "Rayo Vallecano"),
+    ("Augusto Batalla", "Rayo Vallecano"),
+    ("Álex Padilla", "Deportivo"),
+    ("Germán Parreño", "Deportivo"),
+    ("Álvaro Fernández", "Elche"),
+    ("Matías Dituro", "Elche"),
+    ("Fernando Pacheco", "RCD Espanyol"),
+    ("Marko Dmitrović", "RCD Espanyol"),
+    ("Julen Agirrezabala", "Valencia CF"),
+    ("Jaume Doménech", "Valencia CF"),
+    ("Alfonso Herrero", "Málaga"),
+    ("Carlos López", "Málaga"),
+    ("Jokin Ezkieta", "Racing de Santander"),
+    ("Luis Fernández", "Racing de Santander")
   )
 
 }
