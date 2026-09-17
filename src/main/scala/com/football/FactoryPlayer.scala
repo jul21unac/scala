@@ -42,6 +42,39 @@ object FactoryPlayer {
           getInt(0, 100),
           getInt(0, 100)
         )
+
+      case "midField" =>
+        new Midfield(
+          FootbalData.midFieldPlayer(d)._1,
+          getInt(17, 45),
+          "Attack",
+          getInt(50, 100),
+          getInt(0, 50),
+          getInt(0, 100),
+          getInt(0, 100),
+          RealMadrid,
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100)
+        )
+
+      case "GoalKeeper" =>
+        new GoalKeeper(
+          FootbalData.goalkeeper(d)._1,
+          getInt(17, 45),
+          "Attack",
+          getInt(50, 100),
+          getInt(0, 50),
+          getInt(0, 100),
+          getInt(0, 100),
+          RealMadrid,
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100),
+          getInt(0, 100)
+        )
+
       case _ => throw new IllegalArgumentException("Unknown Player type")
 
     }

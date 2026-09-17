@@ -193,4 +193,200 @@ object FootbalData {
     ("Luis Fernández", "Racing de Santander")
   )
 
+  val midFieldPlayer: List[(String, String)] = List(
+    // ALAVÉS
+    ("Antonio Blanco", "Alavés"),
+    ("Guevara", "Alavés"),
+    ("Selu Diallo", "Alavés"),
+    ("Mikel Rodríguez", "Alavés"),
+    ("Denis Suárez", "Alavés"),
+    ("Carles Aleñá", "Alavés"),
+    ("Pablo Ibáñez", "Alavés"),
+    ("Protesoni", "Alavés"),
+    ("Izei Hernández", "Alavés"),
+
+    // ATHLETIC CLUB
+    ("Galarreta", "Athletic Club"),
+    ("Jauregizar", "Athletic Club"),
+    ("Sancet", "Athletic Club"),
+    ("Berenguer", "Athletic Club"),
+    ("Prados", "Athletic Club"),
+    ("Peio Canales", "Athletic Club"),
+    ("Rego", "Athletic Club"),
+    ("Selton", "Athletic Club"),
+    ("Gerenebarrena", "Athletic Club"),
+
+    // ATLÉTICO DE MADRID
+    ("Koke", "Atlético de Madrid"),
+    ("Johnny Cardoso", "Atlético de Madrid"),
+    ("Hjulmand", "Atlético de Madrid"),
+    ("Rodrigo Mendoza", "Atlético de Madrid"),
+    ("Pablo Barrios", "Atlético de Madrid"),
+    ("Obed Vargas", "Atlético de Madrid"),
+    ("Kang-in Lee", "Atlético de Madrid"),
+    ("Álex Baena", "Atlético de Madrid"),
+
+    // BARCELONA
+    ("De Jong", "FC Barcelona"),
+    ("Marc Bernal", "FC Barcelona"),
+    ("Gavi", "FC Barcelona"),
+    ("Pedri", "FC Barcelona"),
+    ("Fermín", "FC Barcelona"),
+    ("Dani Olmo", "FC Barcelona"),
+    ("Rodri", "FC Barcelona"),
+    ("Brian Fariñas", "FC Barcelona"),
+
+    // BETIS
+    ("Facundo Bernal", "Real Betis"),
+    ("Marc Roca", "Real Betis"),
+    ("Fidalgo", "Real Betis"),
+    ("Pablo Fornals", "Real Betis"),
+    ("Isco", "Real Betis"),
+    ("Lo Celso", "Real Betis"),
+    ("Deossa", "Real Betis"),
+    ("Riquelme", "Real Betis"),
+    ("Dani Ceballos", "Real Betis"),
+
+    // CELTA
+    ("Ilaix Moriba", "RC Celta"),
+    ("Miguel Román", "RC Celta"),
+    ("Aleix Febas", "RC Celta"),
+    ("Hugo Álvarez", "RC Celta"),
+    ("Bajcetic", "RC Celta"),
+
+    // DEPORTIVO
+    ("Amatucci", "Deportivo"),
+    ("Riki Rodríguez", "Deportivo"),
+    ("Villares", "Deportivo"),
+    ("Gijselhart", "Deportivo"),
+    ("Asp Jensen", "Deportivo"),
+    ("Mario Soriano", "Deportivo"),
+    ("Jairo Noriega", "Deportivo"),
+    ("Marc Casadó", "Deportivo"),
+
+    // ELCHE
+    ("Marc Aguado", "Elche"),
+    ("Gonzalo Villar", "Elche"),
+    ("Martim Neto", "Elche"),
+    ("Fede Redondo", "Elche"),
+    ("Facundo Buonanotte", "Elche"),
+    ("Morcillo", "Elche"),
+    ("Edgar Alcañiz", "Elche"),
+    ("Germán Valera", "Elche"),
+    ("Lemar", "Elche"),
+
+    // ESPANYOL
+    ("Urko González", "RCD Espanyol"),
+    ("Moscardó", "RCD Espanyol"),
+    ("Edu Expósito", "RCD Espanyol"),
+    ("Pol Lozano", "RCD Espanyol"),
+    ("Bauzà", "RCD Espanyol"),
+    ("Javi Hernández", "RCD Espanyol"),
+
+    // GETAFE
+    ("Mario Martín", "Getafe CF"),
+    ("Terrats", "Getafe CF"),
+    ("Javi Muñoz", "Getafe CF"),
+    ("Macalou", "Getafe CF"),
+    ("Adrián Riquelme", "Getafe CF"),
+    ("Risco", "Getafe CF"),
+    ("Mangala", "Getafe CF"),
+    ("Francho Serrano", "Getafe CF"),
+    ("Nemanja Gudelj", "Getafe CF"),
+
+    // LEVANTE
+    ("Hugo Sotelo", "Levante"),
+    ("Olasagasti", "Levante"),
+    ("Dani Requena", "Levante"),
+    ("Bardeli", "Levante"),
+    ("Oriol Rey", "Levante"),
+    ("Carlos Álvarez", "Levante"),
+    ("Thiago Fernández", "Levante"),
+    ("Axel Tape", "Levante"),
+
+    // MÁLAGA
+    ("Izan Merino", "Málaga"),
+    ("Ramón", "Málaga"),
+    ("Carlos Dotor", "Málaga"),
+    ("Rafa Rodríguez", "Málaga"),
+    ("Dani Lorenzo", "Málaga"),
+    ("Aarón Ochoa", "Málaga"),
+    ("Juan Cruz", "Málaga"),
+    ("Pablo Martínez", "Málaga"),
+    ("Cajuste", "Málaga"),
+
+    // OSASUNA
+    ("Moncayola", "CA Osasuna"),
+    ("Lucas Torró", "CA Osasuna"),
+    ("Iker Muñoz", "CA Osasuna"),
+    ("Aimar Oroz", "CA Osasuna"),
+    ("Moi Gómez", "CA Osasuna"),
+    ("Rubén García", "CA Osasuna"),
+    ("Osambela", "CA Osasuna"),
+    ("Echegoyen", "CA Osasuna"),
+
+    // RACING DE SANTANDER
+    ("Iñigo Sainz", "Racing de Santander"),
+    ("Maguette", "Racing de Santander"),
+    ("Sergio Canales", "Racing de Santander"),
+    ("Iván Martín", "Racing de Santander"),
+    ("Matteo Prati", "Racing de Santander"),
+    ("André Almeida", "Racing de Santander"),
+
+    // RAYO VALLECANO
+    ("Pathé Ciss", "Rayo Vallecano"),
+    ("Pedro Díaz", "Rayo Vallecano"),
+    ("Unai López", "Rayo Vallecano"),
+    ("Óscar Valentín", "Rayo Vallecano"),
+    ("Isi", "Rayo Vallecano"),
+    ("Gnangoro Bouare", "Rayo Vallecano"),
+    ("Belaid", "Rayo Vallecano"),
+
+    // REAL MADRID
+    ("Valverde", "Real Madrid"),
+    ("Tchouaméni", "Real Madrid"),
+    ("Camavinga", "Real Madrid"),
+    ("Bellingham", "Real Madrid"),
+    ("Bernardo Silva", "Real Madrid"),
+    ("Arda Güler", "Real Madrid"),
+    ("Thiago Pitarch", "Real Madrid"),
+
+    // REAL SOCIEDAD
+    ("Gorrotxategi", "Real Sociedad"),
+    ("Yangel Herrera", "Real Sociedad"),
+    ("Turrientes", "Real Sociedad"),
+    ("Pablo Marín", "Real Sociedad"),
+    ("Carlos Soler", "Real Sociedad"),
+    ("Zakharyan", "Real Sociedad"),
+    ("Sucic", "Real Sociedad"),
+
+    // SEVILLA
+    ("Guridi", "Sevilla FC"),
+    ("Agoumé", "Sevilla FC"),
+    ("Peque", "Sevilla FC"),
+    ("Manu Bueno", "Sevilla FC"),
+    ("Oso", "Sevilla FC"),
+    ("Nico Guillén", "Sevilla FC"),
+    ("Kochorashvili", "Sevilla FC"),
+    ("Fofana", "Sevilla FC"),
+
+    // VALENCIA
+    ("Guido Rodríguez", "Valencia CF"),
+    ("Sato", "Valencia CF"),
+    ("Javi Guerra", "Valencia CF"),
+    ("Pepelu", "Valencia CF"),
+    ("Ugrinic", "Valencia CF"),
+    ("Dieng", "Valencia CF"),
+    ("Harvey Elliot", "Valencia CF"),
+
+    // VILLARREAL
+    ("Santi Comesaña", "Villarreal CF"),
+    ("Pape Gueye", "Villarreal CF"),
+    ("Moleiro", "Villarreal CF"),
+    ("Diattá", "Villarreal CF"),
+    ("Maciá", "Villarreal CF"),
+    ("Thiam", "Villarreal CF"),
+    ("Nathan Saliba", "Villarreal CF")
+  )
+
 }
