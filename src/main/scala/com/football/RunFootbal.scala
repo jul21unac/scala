@@ -20,7 +20,7 @@ object RunFootbal {
     println(attPla.Name)
     println(team1.name + team1.Strategy)
     println(miedPla.Name)
-    println(goalKPla.Name)
+    println(goalKPla)
 
   }
 

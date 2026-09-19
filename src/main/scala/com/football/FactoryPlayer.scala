@@ -42,8 +42,7 @@ object FactoryPlayer {
           getInt(0, 100),
           getInt(0, 100)
         )
-
-      case "midField" =>
+      case "midfield" =>
         new Midfield(
           FootbalData.midFieldPlayer(d)._1,
           getInt(17, 45),
@@ -58,8 +57,7 @@ object FactoryPlayer {
           getInt(0, 100),
           getInt(0, 100)
         )
-
-      case "GoalKeeper" =>
+      case "goalkeeper" =>
         new GoalKeeper(
           FootbalData.goalkeeper(d)._1,
           getInt(17, 45),
@@ -74,11 +72,8 @@ object FactoryPlayer {
           getInt(0, 100),
           getInt(0, 100)
         )
-
       case _ => throw new IllegalArgumentException("Unknown Player type")
-
     }
-
   }
 
   def getInt(rangI: Int, rangF: Int): Int = {
