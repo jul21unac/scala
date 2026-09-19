@@ -1,6 +1,6 @@
 package com.football
 
-class GoolKeeper(
+class Midfield(
     val Name: String,
     val age: Int,
     val Position: String,
@@ -12,11 +12,11 @@ class GoolKeeper(
 
     var ActualTeam: Team,
 
-    var CleanSheets: Int,
+    var passCompletionRate: Int,
 
-    var SavePercentage: Int,
+    var progressivePasses: Int,
 
-    var SweepingActions: Int,
+    var expectedAssists: Int,
 
-    var PassCompletion: Int
-) extends Player
+    var finalThirdEntries: Int
+) extends Player {}
