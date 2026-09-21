@@ -12,21 +12,21 @@ object FactoryPlayer {
     val RealMadrid = findTeam("Real Madrid", teams)
     // new Team(name = "Real Madrid", league = "La Liga", "Spain", 433)
 
-    var defensePlay:ListBuffer = FootbalData.DefensePlayers
+    var defensePlay: ListBuffer = FootbalData.DefensePlayers
 
-    var attackPlay:ListBuffer = FootbalData.attack
+    var attackPlay: ListBuffer = FootbalData.attack
 
-    var goolKeeper:ListBuffer = FootbalData.GoalKeeper
+    var goolKeeper: ListBuffer = FootbalData.GoalKeeper
 
-    var midFieldPla:ListBuffer = FootbalData.Midfield
+    var midFieldPla: ListBuffer = FootbalData.Midfield
 
-    //defensePlay.
+    // defensePlay.
 
     typePlayer.toLowerCase match {
 
       case "defence" =>
         new Defence(
-          FootbalData.DefensePlayers(d)._1,
+          FootbalData.DefensePlayers(getInt(1, defensePlay.size))._1,
           getInt(17, 45),
           "Defence",
           getInt(50, 100),
@@ -41,7 +41,7 @@ object FactoryPlayer {
         )
       case "attack" =>
         new Attack(
-          FootbalData.attack(d)._1,
+          FootbalData.attack(getInt(1, attackPlay.size))._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
@@ -54,7 +54,7 @@ object FactoryPlayer {
         )
       case "midfield" =>
         new Midfield(
-          FootbalData.midFieldPlayer(d)._1,
+          FootbalData.midFieldPlayer(getInt(1, midFieldPla.size))._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
@@ -69,7 +69,7 @@ object FactoryPlayer {
         )
       case "goalkeeper" =>
         new GoalKeeper(
-          FootbalData.goalkeeper(d)._1,
+          FootbalData.goalkeeper(getInt(1, goolKeeper.size))._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
