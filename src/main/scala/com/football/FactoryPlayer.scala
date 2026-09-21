@@ -4,7 +4,6 @@ import scala.collection.mutable.ArrayBuffer
 
 object FactoryPlayer {
 
-  val d = 0
   val teams = createTeams
 
   def NewPlayer(typePlayer: String): Player = {
@@ -20,20 +19,23 @@ object FactoryPlayer {
 
     var midFieldPla: ListBuffer = FootbalData.Midfield
 
-    // defensePlay.
+    val d = getInt(1, defensePlay.size)
+    val a = getInt(1, attackPlay.size)
+    val g = getInt(1, goolKeeper.size)
+    val m = getInt(1, midFieldPla.size)
 
     typePlayer.toLowerCase match {
 
       case "defence" =>
         new Defence(
-          FootbalData.DefensePlayers(getInt(1, defensePlay.size))._1,
+          FootbalData.DefensePlayers(d)._1,
           getInt(17, 45),
           "Defence",
           getInt(50, 100),
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
-          RealMadrid,
+          findTeam(FootbalData.DefensePlayers(d)._2, teams),
           getInt(0, 100),
           getInt(0, 100),
           getInt(0, 100),
@@ -41,7 +43,7 @@ object FactoryPlayer {
         )
       case "attack" =>
         new Attack(
-          FootbalData.attack(getInt(1, attackPlay.size))._1,
+          FootbalData.attack(a)._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
@@ -54,7 +56,7 @@ object FactoryPlayer {
         )
       case "midfield" =>
         new Midfield(
-          FootbalData.midFieldPlayer(getInt(1, midFieldPla.size))._1,
+          FootbalData.midFieldPlayer(m)._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
@@ -69,7 +71,7 @@ object FactoryPlayer {
         )
       case "goalkeeper" =>
         new GoalKeeper(
-          FootbalData.goalkeeper(getInt(1, goolKeeper.size))._1,
+          FootbalData.goalkeeper(g)._1,
           getInt(17, 45),
           "Attack",
           getInt(50, 100),
