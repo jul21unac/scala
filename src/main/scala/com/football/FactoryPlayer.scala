@@ -12,6 +12,16 @@ object FactoryPlayer {
     val RealMadrid = findTeam("Real Madrid", teams)
     // new Team(name = "Real Madrid", league = "La Liga", "Spain", 433)
 
+    var defensePlay:ListBuffer = FootbalData.DefensePlayers
+
+    var attackPlay:ListBuffer = FootbalData.attack
+
+    var goolKeeper:ListBuffer = FootbalData.GoalKeeper
+
+    var midFieldPla:ListBuffer = FootbalData.Midfield
+
+    //defensePlay.
+
     typePlayer.toLowerCase match {
 
       case "defence" =>
