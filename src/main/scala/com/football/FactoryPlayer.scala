@@ -50,7 +50,7 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
-          RealMadrid,
+          findTeam(FootbalData.DefensePlayers(a)._2, teams),
           getInt(0, 100),
           getInt(0, 100)
         )
@@ -63,7 +63,7 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
-          RealMadrid,
+          findTeam(FootbalData.DefensePlayers(m)._2, teams),
           getInt(0, 100),
           getInt(0, 100),
           getInt(0, 100),
@@ -78,7 +78,7 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
-          RealMadrid,
+          findTeam(FootbalData.DefensePlayers(g)._2, teams),
           getInt(0, 100),
           getInt(0, 100),
           getInt(0, 100),
