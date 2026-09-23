@@ -19,4 +19,7 @@ trait Player {
 
   var ActualTeam: Team
 
+
+override def toString(): String = s"Name = $Name, age = $age, position =$Position"
+
 }

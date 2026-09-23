@@ -1,6 +1,7 @@
 package com.football
 import scala.util.Random
 import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.ListBuffer
 
 object FactoryPlayer {
 
@@ -11,18 +12,18 @@ object FactoryPlayer {
     val RealMadrid = findTeam("Real Madrid", teams)
     // new Team(name = "Real Madrid", league = "La Liga", "Spain", 433)
 
-    var defensePlay: ListBuffer = FootbalData.DefensePlayers
+    var defensePlay= FootbalData.DefensePlayers
 
-    var attackPlay: ListBuffer = FootbalData.attack
+    var attackPlay = FootbalData.attack
 
-    var goolKeeper: ListBuffer = FootbalData.GoalKeeper
+    var goolKeeper = FootbalData.goalkeeper
 
-    var midFieldPla: ListBuffer = FootbalData.Midfield
+    var midFieldPla = FootbalData.midFieldPlayer
 
-    val d = getInt(1, defensePlay.size)
-    val a = getInt(1, attackPlay.size)
-    val g = getInt(1, goolKeeper.size)
-    val m = getInt(1, midFieldPla.size)
+    val d = getInt(0, defensePlay.size-1)
+    val a = getInt(0, attackPlay.size-1)
+    val g = getInt(0, goolKeeper.size-1)
+    val m = getInt(0, midFieldPla.size-1)
 
     typePlayer.toLowerCase match {
 
@@ -50,7 +51,7 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
-          findTeam(FootbalData.DefensePlayers(a)._2, teams),
+          findTeam(FootbalData.attack(a)._2, teams),
           getInt(0, 100),
           getInt(0, 100)
         )
@@ -63,7 +64,7 @@ object FactoryPlayer {
           getInt(0, 50),
           getInt(0, 100),
           getInt(0, 100),
-          findTeam(FootbalData.DefensePlayers(m)._2, teams),
+          findTeam(FootbalData.midFieldPlayer(m)._2, teams),
           getInt(0, 100),
           getInt(0, 100),
           getInt(0, 100),
