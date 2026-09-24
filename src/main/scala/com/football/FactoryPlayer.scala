@@ -59,7 +59,7 @@ object FactoryPlayer {
         new Midfield(
           FootbalData.midFieldPlayer(m)._1,
           getInt(17, 45),
-          "Attack",
+          "Midfield",
           getInt(50, 100),
           getInt(0, 50),
           getInt(0, 100),
@@ -74,7 +74,7 @@ object FactoryPlayer {
         new GoalKeeper(
           FootbalData.goalkeeper(g)._1,
           getInt(17, 45),
-          "Attack",
+          "GoalKeeper",
           getInt(50, 100),
           getInt(0, 50),
           getInt(0, 100),
