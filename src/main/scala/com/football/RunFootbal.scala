@@ -7,25 +7,6 @@ object RunFootbal {
   def main(arg: Array[String])
   {
 
-    val defen_2 = FactoryPlayer.NewPlayer("Defence")
-
-    val attPla = FactoryPlayer.NewPlayer("attack")
-
-    val team1 = FactoryTeam.NewTeam("Barza")
-
-    val miedPla = FactoryPlayer.NewPlayer("midField")
-
-    val goalKPla = FactoryPlayer.NewPlayer("GoalKeeper")
-
-    // println(Defen_1.Name)
-    /*
-    println(defen_2.Name)
-    println(attPla.Name)
-    println(team1.name + team1.Strategy)
-    println(miedPla.Name)
-    println(goalKPla)
-*/
-
     val players = createTeam(Array(3,5,2),"Random FC")
 
     players.foreach(println)
@@ -35,21 +16,22 @@ object RunFootbal {
 def createTeam(tactic: Array[Int], nombre: String ) : ListBuffer[Player] =
 {
   if (tactic.length != 3) throw new Exception
+    val players = ListBuffer.empty[Player]
+    var usedNames = ListBuffer.empty[String]
 
-  val players: ListBuffer[Player] = ListBuffer.empty[Player]
-  players.append(FactoryPlayer.NewPlayer("GoalKeeper") )
-  for ( i  <- 0 until tactic(0)  )
-  {
-    players.append(FactoryPlayer.NewPlayer("Defence") )
-  }
-  for ( i  <- 0 until tactic(1)  )
-  {
-    players.append(FactoryPlayer.NewPlayer("midField") )
-  }
-  for ( i  <- 0 until tactic(2)  )
-  {
-    players.append(FactoryPlayer.NewPlayer("attack") )
-  }
+    def addPlayer(position: String): Unit = {
+      val player = FactoryPlayer.NewPlayer(position, usedNames)
+      players += player
+      usedNames += player.Name
+    }
+
+    addPlayer("GoalKeeper")
+
+
+
+    for (_ <- 0 until tactic(0)) addPlayer("Defence")
+    for (_ <- 0 until tactic(1)) addPlayer("Midfield")
+    for (_ <- 0 until tactic(2)) addPlayer("Attack")
   players
 }
 

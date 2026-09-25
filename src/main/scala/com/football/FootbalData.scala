@@ -126,7 +126,7 @@ object FootbalData {
     "Atlético de Madrid",
     "FC Barcelona",
     "RC Celta",
-    "Deportivo",
+    "Deportivo de A Coruña",
     "Elche",
     "RCD Espanyol",
     "Getafe CF",
@@ -140,7 +140,8 @@ object FootbalData {
     "Real Sociedad",
     "Sevilla FC",
     "Valencia CF",
-    "Villarreal CF"
+    "Villarreal CF",
+    "RCD Mallorca"
   )
 
   val goalkeeper: List[(String, String)] = List(
@@ -179,8 +180,8 @@ object FootbalData {
     ("Andrés Fernández", "Levante"),
     ("Dani Cárdenas", "Rayo Vallecano"),
     ("Augusto Batalla", "Rayo Vallecano"),
-    ("Álex Padilla", "Deportivo"),
-    ("Germán Parreño", "Deportivo"),
+    ("Álex Padilla", "Deportivo de A Coruña"),
+    ("Germán Parreño", "Deportivo de A Coruña"),
     ("Álvaro Fernández", "Elche"),
     ("Matías Dituro", "Elche"),
     ("Fernando Pacheco", "RCD Espanyol"),
@@ -255,14 +256,14 @@ object FootbalData {
     ("Bajcetic", "RC Celta"),
 
     // DEPORTIVO
-    ("Amatucci", "Deportivo"),
-    ("Riki Rodríguez", "Deportivo"),
-    ("Villares", "Deportivo"),
-    ("Gijselhart", "Deportivo"),
-    ("Asp Jensen", "Deportivo"),
-    ("Mario Soriano", "Deportivo"),
-    ("Jairo Noriega", "Deportivo"),
-    ("Marc Casadó", "Deportivo"),
+    ("Amatucci", "Deportivo de A Coruña"),
+    ("Riki Rodríguez", "Deportivo de A Coruña"),
+    ("Villares", "Deportivo de A Coruña"),
+    ("Gijselhart", "Deportivo de A Coruña"),
+    ("Asp Jensen", "Deportivo de A Coruña"),
+    ("Mario Soriano", "Deportivo de A Coruña"),
+    ("Jairo Noriega", "Deportivo de A Coruña"),
+    ("Marc Casadó", "Deportivo de A Coruña"),
 
     // ELCHE
     ("Marc Aguado", "Elche"),
