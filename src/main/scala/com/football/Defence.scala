@@ -1,24 +1,24 @@
 package com.football
 
 class Defence(
-    val Name: String,
+    val name: String,
 
     val age: Int,
 
-    val Position: String,
+    val position: String,
 
-    var GamePlay: Int,
+    var gamePlay: Int,
 
-    var Starts: Int,
+    var starts: Int,
 
-    var Pass: Int,
+    var pass: Int,
 
-    var Fouls: Int,
+    var fouls: Int,
 
-    var ActualTeam: Team,
+    var actualTeam: Team,
 
-    var Tackles: Int,
-    var Interceptions: Int,
-    var Clearances: Int,
-    var Blocks: Int
+    var tackles: Int,
+    var interceptions: Int,
+    var clearances: Int,
+    var blocks: Int
 ) extends Player

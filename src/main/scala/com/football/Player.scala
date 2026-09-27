@@ -1,25 +1,25 @@
 package com.football
 
 trait Player {
-  val Name: String
+  val name: String
 
   val age: Int
 
-  val Position: String
+  val position: String
   // number of game play
-  var GamePlay: Int
+  var gamePlay: Int
 
-  var Starts: Int
+  var starts: Int
 
   // number of pass
-  var Pass: Int
+  var pass: Int
   // number of gols
 
-  var Fouls: Int
+  var fouls: Int
 
-  var ActualTeam: Team
+  var actualTeam: Team
 
 
-override def toString(): String = s"Name = $Name, age = $age, position =$Position"
+override def toString(): String = s"Name = $name, age = $age, position =$position"
 
 }

@@ -1,17 +1,17 @@
 package com.football
 
 class Attack(
-    val Name: String,
+    val name: String,
     val age: Int,
-    val Position: String,
-    var GamePlay: Int,
-    var Starts: Int,
-    var Pass: Int,
+    val position: String,
+    var gamePlay: Int,
+    var starts: Int,
+    var pass: Int,
 
-    var Fouls: Int,
+    var fouls: Int,
 
-    var ActualTeam: Team,
+    var actualTeam: Team,
 
-    var Gol: Int,
-    var Asistence: Int
+    var gol: Int,
+    var asistence: Int
 ) extends Player

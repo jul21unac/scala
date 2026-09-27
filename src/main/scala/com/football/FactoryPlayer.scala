@@ -7,7 +7,7 @@ object FactoryPlayer {
 
   val teams = createTeams
 
-  def NewPlayer(typePlayer: String, usedNames: ListBuffer[String]): Player = {
+  def newPlayer(typePlayer: String, usedNames: ListBuffer[String]): Player = {
 
     var defensePlay= FootbalData.DefensePlayers
 
@@ -105,7 +105,7 @@ object FactoryPlayer {
 
     val teams: List[(String)] = FootbalData.teams
 
-    teams.foreach(elem => listTeam.append(FactoryTeam.NewTeam(elem)))
+    teams.foreach(elem => listTeam.append(FactoryTeam.newTeam(elem)))
 
     listTeam
 

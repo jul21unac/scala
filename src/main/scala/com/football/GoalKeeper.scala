@@ -1,22 +1,22 @@
 package com.football
 
 class GoalKeeper(
-    val Name: String,
+    val name: String,
     val age: Int,
-    val Position: String,
-    var GamePlay: Int,
-    var Starts: Int,
-    var Pass: Int,
+    val position: String,
+    var gamePlay: Int,
+    var starts: Int,
+    var pass: Int,
 
-    var Fouls: Int,
+    var fouls: Int,
 
-    var ActualTeam: Team,
+    var actualTeam: Team,
 
-    var CleanSheets: Int,
+    var cleanSheets: Int,
 
-    var SavePercentage: Int,
+    var savePercentage: Int,
 
-    var SweepingActions: Int,
+    var sweepingActions: Int,
 
-    var PassCompletion: Int
+    var passCompletion: Int
 ) extends Player
