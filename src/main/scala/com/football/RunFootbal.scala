@@ -20,9 +20,9 @@ def createTeam(tactic: Array[Int], nombre: String ) : ListBuffer[Player] =
     var usedNames = ListBuffer.empty[String]
 
     def addPlayer(position: String): Unit = {
-      val player = FactoryPlayer.NewPlayer(position, usedNames)
+      val player = FactoryPlayer.newPlayer(position, usedNames)
       players += player
-      usedNames += player.Name
+      usedNames += player.name
     }
 
     addPlayer("GoalKeeper")
